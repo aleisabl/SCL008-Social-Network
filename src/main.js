@@ -1,3 +1,6 @@
+//inicialización firebase
+//llamado a las rutas
+
 let mainText = document.getElementById('mainText');
 
 let submitBtn = document.getElementById('submitBtn')
