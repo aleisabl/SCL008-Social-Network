@@ -1,14 +1,11 @@
-//inicialización firebase
-//llamado a las rutas
+//llamado a la iniciación de la ruta 
+//inicializando firebase
 
-let mainText = document.getElementById('mainText');
+import { initRouter } from './route.js';
 
-let submitBtn = document.getElementById('submitBtn')
+const init = () => {
+    initRouter();
+}
 
-submitBtn.addEventListener('click', () => {
+window.addEventListener('load', init);
 
-    let firebaseRef = firebase.database().ref();
-
-    firebaseRef.child('Text').set('Some Value');
-
-})
