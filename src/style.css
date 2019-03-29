@@ -1,0 +1,92 @@
+body{
+  
+
+ /*   background-image: url(https://raw.githubusercontent.com/aleisabl/SCL008-Social-Network/master/src/assets/Moodboard/vegetables.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;*/
+  background-color: #f2f2f2;
+   background-image: url(assets/Moodboard/vegetables.jpg);
+  
+}
+input{
+  border:none;
+}
+
+
+.some-page-wrapper {
+  margin: 15px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+.blue-column {
+  
+  height: 400px;
+  background-size: cover;
+}
+
+.green-column {
+  background-color: white;
+  height: 600px;
+  width: 450px;
+  text-align: left;
+  margin-left: 150px;
+  box-shadow: 0 0 15px rgba(0,0,0,.5);
+  opacity: 0.95;
+  
+}
+
+#sign-in{
+  width: 180px;
+  border: none;
+  border-radius: 5px;
+  padding: 2%;
+  background-color: #FD7F31;
+  margin-top: 5%;
+  margin-left: 30px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+
+}
+
+.cfield{
+
+
+    float: left;
+    width: 80%;
+    position: relative;
+    margin-left: 30px;
+    margin-bottom: 19px;
+    border-bottom: 1px solid black;
+    padding-top: 5%;
+    
+
+  }
+
+  #forgot-container{
+     margin-left: 30px; 
+     padding-top: 5%;
+  }
+
+  #logo-welcome{
+    
+    background-image: url(assets/Moodboard/Logo.png);
+    width: 500px;
+    height: 250px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 90px;
+}
