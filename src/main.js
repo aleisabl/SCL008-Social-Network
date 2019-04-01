@@ -1,5 +1,3 @@
-//llamado a la iniciación de la ruta 
-
  // Initialize Firebase
  var config = {
     apiKey: "AIzaSyAbxLiczr6qFmwWmGszkaWL5-3y7CkEH0M",
@@ -10,6 +8,7 @@
     messagingSenderId: "665368959324"
   };
   firebase.initializeApp(config);
+
 import { initRouter } from './route.js';
 
 const init = () => {
