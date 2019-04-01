@@ -8,55 +8,7 @@ import { loginGoogle } from './../js/auth.js';
 export const templateLogin = () => {
     //creamos div que contendrá la plantilla
     const containerLogin = document.createElement('div');
-    const contentLogin = `<div class='some-page-wrapper'>
-      <div class='row'>
-        <div class='column'>
-          <div class='blue-column'>
-            
-
-            <div>
-    <div class="carousel">
-        <ul class="slides">
-            <input type="radio" name="radio-buttons" id="img-1" checked />
-            <li class="slide-container">
-                <div class="slide-image">
-                    <img src="assets/Moodboard/prueba.png">
-                </div>
-                <div class="carousel-controls">
-                    <label for="img-3" class="prev-slide">
-                        <span>&lsaquo;</span>
-                    </label>
-                    <label for="img-2" class="next-slide">
-                      <span>&rsaquo;</span>
-                    </label>
-                </div>
-            </li>
-            <input type="radio" name="radio-buttons" id="img-2" />
-            <li class="slide-container">
-                <div class="slide-image">
-                    <img src="assets/Moodboard/SEGUNDO.png">
-                </div>
-                <div class="carousel-controls">
-                    <label for="img-1" class="prev-slide">
-                        <span>&lsaquo;</span>
-                    </label>
-                    <label for="img-3" class="next-slide">
-                        <span>&rsaquo;</span>
-                    </label>
-                </div>
-            </li>
-            
-           
-            
-        </ul>
-    </div>
-</div>
-
-
-
-
-          </div>
-        </div>
+    const contentLogin = ` 
         <div class='column'>
           <div class='green-column' id="green-columns">
             <div id="logo-welcome">
