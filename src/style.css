@@ -2,7 +2,6 @@ input {
   border:none;
 }
 
-
 .some-page-wrapper {
   margin: 15px;
 }
@@ -29,7 +28,7 @@ input {
 
 .green-column {
   background-color: white;
-  height: 580px;
+  height: 600px;
   text-align: left;
   box-shadow: 0 0 15px rgba(0,0,0,.5);
   opacity: 0.95;
@@ -42,7 +41,7 @@ input {
   border-radius: 5px;
   padding: 1%;
   background-color: #FD7F31;
-  margin-top: 5%;
+  margin-top: 0%;
   margin-left: 35px;
   color: white;
   cursor: pointer;
@@ -105,7 +104,6 @@ input {
   }
 
   #logo-welcome{
-    
     background-image: url(assets/Moodboard/Logo.png);
     height: 200px;
     background-size: contain;
