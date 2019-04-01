@@ -22,6 +22,7 @@ const showTemplate = (hash) => {
     const containerRoot = document.getElementById('root');
     containerRoot.innerHTML = '';
     
+    
     //hacemos el match del hash utilizado y el template que quiero msotrar
 
     switch (router) {
@@ -42,6 +43,12 @@ const showTemplate = (hash) => {
 
  export const initRouter = () => {
      window.addEventListener('load', changeRouter(window.location.hash));
+
+     const containerRoot = document.getElementById('root');
+     containerRoot.appendChild(templateLogin());
+     
+
+
 
      //reconoce un cambio en el hash y le pasa ese nuevo hash a changeRouter
 
