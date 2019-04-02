@@ -31,6 +31,16 @@ Se realizó una encuesta para poder conocer más sobre las preferencias de los u
 ## 4
  Yo como persona con enfermedades alimentarias quiero que la aplicación se centre en filtrar recetas para mi condición porque es más accesible y cómodo.
 
+ ## 5
+ Yo como usuario muy respetuoso en las redes sociales quiero poder reportar si un post me parece ofensivo o erróneo porque considero que una red social sin ofensas es lo más sano.
+
+ ## 6
+
+Yo como usuario de esta aplicación de recetas quiero poder publicar mis propias recetas para aportar a la comunidad.
+
+ ## 7
+Yo como usuario que siempre escribe posts quiero poder eliminar o editar mi contenido en caso de equivocación para que no existan errores.
+
  ## **Prototipo de Baja Fidelidad** 
 
  El prototipo de esta página consta de 6 pantallas. La primera es donde el usuario inicia su sesión,la cual puede ser con una cuenta creada desde la aplicación con su email y contraseña, mediante su cuenta de Gmail o mediante su cuenta Google, si no esta registrado y no quiere iniciar sesión desde Google, hay un link que dice "registrate aquí" y se abre otra pantalla donde puede ingresar sus datos y crear su cuenta con clave.
