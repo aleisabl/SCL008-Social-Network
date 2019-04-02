@@ -3,69 +3,9 @@ import { createAccount } from './../js/auth.js';
 export const templateCreate = () => {
     //creamos div que contendrá la plantilla
     const containerCreate = document.createElement('div');
-    const contentCreate = `<div class='some-page-wrapper'>
-      <div class='row'>
-        <div class='column'>
-          <div class='blue-column'>
-            
-
-            <div>
-                <div class="carousel">
-                    <ul class="slides">
-                        <input type="radio" name="radio-buttons" id="img-1" checked />
-                        <li class="slide-container">
-                            <div class="slide-image">
-                                <img src="assets/Moodboard/prueba.png">
-                            </div>
-                            <div class="carousel-controls">
-                                <label for="img-3" class="prev-slide">
-                                    <span>&lsaquo;</span>
-                                </label>
-                                <label for="img-2" class="next-slide">
-                                  <span>&rsaquo;</span>
-                                </label>
-                            </div>
-                        </li>
-                        <input type="radio" name="radio-buttons" id="img-2" />
-                        <li class="slide-container">
-                            <div class="slide-image">
-                                <img src="assets/Moodboard/SEGUNDO.png">
-                            </div>
-                            <div class="carousel-controls">
-                                <label for="img-1" class="prev-slide">
-                                    <span>&lsaquo;</span>
-                                </label>
-                                <label for="img-3" class="next-slide">
-                                    <span>&rsaquo;</span>
-                                </label>
-                            </div>
-                        </li>
-                        <input type="radio" name="radio-buttons" id="img-3" />
-                        <li class="slide-container">
-                            <div class="slide-image">
-                                <img src="https://speakzeasy.files.wordpress.com/2015/05/twa_blogpic_timisoara-4415.jpg">
-                            </div>
-                            <div class="carousel-controls">
-                                <label for="img-2" class="prev-slide">
-                                    <span>&lsaquo;</span>
-                                </label>
-                                <label for="img-1" class="next-slide">
-                                    <span>&rsaquo;</span>
-                                </label>
-                            </div>
-                        </li>
-                        
-                    </ul>
-                </div>
-            </div>
-
-
-
-
-          </div>
-        </div>
-        <div class='column'>
-          <div class='green-column' id="green-columns">
+    const contentCreate = `
+      
+          <div class='' id="green-columns">
             <div id="logo-welcome" >
                 
             </div>
@@ -98,11 +38,26 @@ export const templateCreate = () => {
     //le pido que busque el id del botón dentro del div cerrado
     const btn = containerCreate.querySelector('#create');
     //evento del botón que llama a la autentificación de Google
-    btn.addEventListener('click', () => {
-    let pass = containerCreate.querySelector('#pass').value;
-    let mail = containerCreate.querySelector('#mail').value;
+    const verifyPass = () =>{
+        let pass = containerCreate.querySelector('#pass').value;
+        let mail = containerCreate.querySelector('#mail').value;
+        let passRepeat = containerCreate.querySelector('#pass-repeat').value;
 
-        createAccount(mail,pass);
+        console.log("estoy entrando a la función")
+
+        if (pass === passRepeat) {
+            createAccount(mail,pass);
+            console.log("está bien")
+        }
+        else{
+            alert("error")
+        }
+    }
+
+    btn.addEventListener('click', () => {
+    
+    verifyPass()
+        
     })
     return containerCreate;
 }
