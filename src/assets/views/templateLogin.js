@@ -60,7 +60,7 @@ export const templateLogin = () => {
     return containerLogin;
 }
 
-export const hello = () => 'hello';
+/* export const hello = () => 'hello';
 
 export const add = (x, y) => {
     if(typeof x != 'number' || typeof y != 'number'){
@@ -68,4 +68,4 @@ export const add = (x, y) => {
     }
 
     return x + y;
-}
+} */
