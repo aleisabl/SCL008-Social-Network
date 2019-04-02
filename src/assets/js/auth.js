@@ -47,4 +47,14 @@ export const createAccount = (email,password) => {
     return 'cuenta creada OK';
 }
 
+export const verifyPass = (pass, passRepeat) => {
 
+	console.log("estoy entrando a la función")
+
+	if (pass === passRepeat) {
+			return true;
+	}
+	else {
+		return false;
+	}
+} 
