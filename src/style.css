@@ -1,17 +1,6 @@
-body{
-  
-
- /*   background-image: url(https://raw.githubusercontent.com/aleisabl/SCL008-Social-Network/master/src/assets/Moodboard/vegetables.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;*/
-  background-color: #f2f2f2;
-   background-image: url(assets/Moodboard/vegetables.jpg);
-  
-}
-input{
+input {
   border:none;
 }
-
 
 .some-page-wrapper {
   margin: 15px;
@@ -40,31 +29,42 @@ input{
 .green-column {
   background-color: white;
   height: 600px;
-  width: 450px;
   text-align: left;
-  margin-left: 150px;
   box-shadow: 0 0 15px rgba(0,0,0,.5);
   opacity: 0.95;
   
 }
 
-#sign-in{
-  width: 180px;
+.sign-in-style {
+  width: 250px;
   border: none;
   border-radius: 5px;
-  padding: 2%;
+  padding: 1%;
   background-color: #FD7F31;
-  margin-top: 5%;
-  margin-left: 30px;
+  margin-top: 0%;
+  margin-left: 35px;
   color: white;
-  font-size: 20px;
   cursor: pointer;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 25px;
 
 }
 
-.cfield{
+.sign-in-google {
+  background-color:  #FD7F31;
+  font-family: 'Open Sans Condensed', sans-serif;
+  border-radius: 5px;
+  color: white;
+  font-size: 25px;
+  padding:1%;
+  width: 200px !important;
+  margin-left: 35px;
+  text-decoration: none;
+  padding-left: 18%;
+  padding-right: 20%;
+}
 
-
+.cfield {
     float: left;
     width: 80%;
     position: relative;
@@ -72,106 +72,44 @@ input{
     margin-bottom: 19px;
     border-bottom: 1px solid black;
     padding-top: 5%;
-    
-
   }
 
   #forgot-container{
-     margin-left: 30px; 
+     margin-left: 100px; 
      padding-top: 5%;
+     font-family: 'Open Sans Condensed', sans-serif;
+     color: gray;
+     padding-bottom: 5%;
+
+  }
+  #register{
+    margin-left: 60px; 
+     padding-top: 2%;
+     font-family: 'Open Sans Condensed', sans-serif;
+     color: gray;
+     padding-bottom: 5%;
+  }
+
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 18px;
+  }
+
+  input{
+    width: 250px;
+    height: 30px;
+  }
+  input:focus{
+    outline: none !important;
   }
 
   #logo-welcome{
-    
     background-image: url(assets/Moodboard/Logo.png);
-    width: 500px;
-    height: 250px;
+    height: 200px;
     background-size: contain;
     background-repeat: no-repeat;
-    margin-left: 90px;
+    margin-left: 60px;
 }
-
-@media(max-width:767px)  {
-  body{
-    /*   background-image: url(https://raw.githubusercontent.com/aleisabl/SCL008-Social-Network/master/src/assets/Moodboard/vegetables.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;*/
-    background-color: #f2f2f2;
-      background-image: url(assets/Moodboard/vegetables.jpg);
-  
-  }
-  input{
-    border:none;
-  }
-.some-page-wrapper {
-    margin: 15px;
-  }
-.row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-   }
-   
-  .column {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
-    flex: 1;
-   }
-  
-  .blue-column {
-
-    height: 400px;
-    background-size: cover;
-  }
-   
-  .green-column {
-    background-color: white;
-    height: 600px;
-    width: 450px;
-    text-align: left;
-    margin-left: 150px;
-    box-shadow: 0 0 15px rgba(0,0,0,.5);
-    opacity: 0.95;
-    
-   }
-  
-   #sign-in{
-    width: 180px;
-    border: none;
-    border-radius: 5px;
-    padding: 2%;
-    background-color: #FD7F31;
-    margin-top: 5%;
-    margin-left: 30px;
-    color: white;
-    font-size: 20px;
-    cursor: pointer;
-  
-   }
-   
-   .cfield{
-    float: left;
-      width: 80%;
-      position: relative;
-      margin-left: 30px;
-      margin-bottom: 19px;
-      border-bottom: 1px solid black;
-      padding-top: 5%;
-    }
-    #forgot-container{
-        margin-left: 30px; 
-        padding-top: 5%;
-    }
-   
-     #logo-welcome{
-      
-      background-image: url(assets/Moodboard/Logo.png);
-      width: 500px;
-      height: 250px;
-      background-size: contain;
-      background-repeat: no-repeat;
-      margin-left: 90px;
-  }
+#muro{
+  display: none;
 }
