@@ -1,5 +1,10 @@
-input {
+input{
   border:none;
+}
+
+body{
+  margin:0;
+  font-family: 'Open Sans Condensed', sans-serif;
 }
 
 .some-page-wrapper {
@@ -11,6 +16,7 @@ input {
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
+  padding-top: 3%;
 }
 
 .column {
@@ -20,6 +26,35 @@ input {
   flex: 1;
 }
 
+.grid-one{
+  margin-top: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,.5);
+  height: 100px;
+  margin: 5px;
+}
+
+.grid-two{
+
+  box-shadow: 0 0 15px rgba(0,0,0,.5);
+  height: 100px;
+  margin: 5px;
+}
+.grid-title{
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  margin-top:18px;
+}
+
+.options{
+  background-color:  #FD7F31;
+  padding: 3%;
+}
+
+footer{
+  background-color:  #FD7F31;
+  padding: 5%;
+}
 .blue-column {
   
   height: 400px;
@@ -110,3 +145,12 @@ input {
     background-repeat: no-repeat;
     margin-left: 60px;
 }
+
+.logo{
+  background-image: url(assets/Moodboard/Sin.png);
+  background-size: 100px 100px;
+  height: 100px;
+  background-repeat: no-repeat;
+  margin-top: 8px;
+}
+

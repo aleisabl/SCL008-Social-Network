@@ -8,9 +8,9 @@ import { loginGoogle } from './../js/auth.js';
 export const templateLogin = () => {
     //creamos div que contendrá la plantilla
     const containerLogin = document.createElement('div');
-    const contentLogin = ` 
-        <div class='column'>
-          <div class='green-column' id="green-columns">
+    const contentLogin = `
+        <div class=''>
+          <div class='' id="">
             <div id="logo-welcome">
                 
             </div>
@@ -59,6 +59,7 @@ export const templateLogin = () => {
     })
     return containerLogin;
 }
+
 
 /* export const hello = () => 'hello';
 
