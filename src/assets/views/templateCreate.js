@@ -4,8 +4,7 @@ export const templateCreate = () => {
     //creamos div que contendrá la plantilla
     const containerCreate = document.createElement('div');
     const contentCreate = `
-        <div class='column'>
-          <div class='green-column' id="green-columns">
+          <div class='' id="green-columns">
             <div id="logo-welcome" >
                 
             </div>
@@ -36,11 +35,26 @@ export const templateCreate = () => {
     //le pido que busque el id del botón dentro del div cerrado
     const btn = containerCreate.querySelector('#create');
     //evento del botón que llama a la autentificación de Google
-    btn.addEventListener('click', () => {
-    let pass = containerCreate.querySelector('#pass').value;
-    let mail = containerCreate.querySelector('#mail').value;
+    const verifyPass = () =>{
+        let pass = containerCreate.querySelector('#pass').value;
+        let mail = containerCreate.querySelector('#mail').value;
+        let passRepeat = containerCreate.querySelector('#pass-repeat').value;
 
-        createAccount(mail,pass);
+        console.log("estoy entrando a la función")
+
+        if (pass === passRepeat) {
+            createAccount(mail,pass);
+            console.log("está bien")
+        }
+        else{
+            alert("error")
+        }
+    }
+
+    btn.addEventListener('click', () => {
+    
+    verifyPass()
+        
     })
     return containerCreate;
 }
