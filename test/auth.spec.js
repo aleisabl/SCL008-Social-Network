@@ -1,4 +1,4 @@
-import { hello, add } from './../src/assets/views/templateLogin.js';
+/* import { hello, add } from './../src/assets/views/templateLogin.js';
 
 describe('hello', () => {
     it('should outpout hello', () => {
@@ -24,9 +24,9 @@ describe('add', () => {
     it('should not add arrays', () => {
         expect(add(2, [])).toBe(null);
     });
-});
+});  */
 
-/* import { createAccount } from './../src/assets/js/auth.js';
+ /* import { createAccount } from './../src/assets/js/auth.js';
 
 describe('createAccount', () => {
     it('should return is a function', () => {
@@ -38,9 +38,23 @@ describe('createAccount', () => {
     it('should return cuenta creada OK', () => {
         expect(createAccount('aleisabl.25@gmail.com',123456789)).toBe('cuenta creada OK');
     });    
+}); 
+
+
+  import { verifyPass } from './../src/assets/views/templateCreate.js';
+
+ //toBeGreaterThan espera que la funcion o variable dada tenga esa longitud o más
+
+ describe('templateCreate', () => {
+    it('input nombre no debe estar vacío', () => {
+        expect(templateCreate(name).length).toBeGreaterThan(1);
+    });    
+}); 
+
+
+// toEqual compara el valor de dos variables, sirve para contraseña y repetir contraseña
+describe('templateCreate', () => {
+    it('contraseña y repetir contraseña deben ser iguales', () => {
+        expect(verifyPass(pass)).toEqual(pass-repeat);
+    });    
 }); */
-
-
-/* input nombre y apellido no deben estar vacios
-value del input repetir contraseña sea igual a crear contraseña
- */
