@@ -2,7 +2,6 @@
    Debemos importar la función login Google 
 */
 
-
 import { loginGoogle } from './../js/auth.js';
 
 export const templateLogin = () => {
@@ -18,20 +17,20 @@ export const templateLogin = () => {
                 <i class="fas fa-user-alt"></i>
                 <input type="email"  placeholder="Correo" name="">
             </div>
+
             <div class="cfield">
                 <i class="fas fa-key"></i>
                <input type="password" placeholder="Contraseña" name="">
             </div>
-            <div >
+
+            <div>
                 <button id="sign-in" class="sign-in-style">Iniciar Sesión</button>
             </div>
-            
             
             <div id="forgot-container">
                 <a href="#/forgot">Olvidaste tu contraseña?</a>
             </div>
-            <div >
-                    
+            <div>
     
                     <div>
                         <a href="#/login" id="login" class="sign-in-google"> <i class="fab fa-google"></i>&nbsp;Login Google</a>
@@ -41,7 +40,6 @@ export const templateLogin = () => {
                         <p id="register">No tienes una cuenta? &nbsp;<a href="#/create">Regístrate Aquí</a></p>
                     </div>
 
-                  
             </div>
           </div>
         </div>

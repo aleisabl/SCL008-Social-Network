@@ -34,22 +34,21 @@ export const templateCreate = () => {
     containerCreate.innerHTML = contentCreate;
     //le pido que busque el id del botón dentro del div cerrado
     const btn = containerCreate.querySelector('#create');
+
     //evento del botón que llama a la autentificación de Google
-    
     btn.addEventListener('click', () => {
 
-	let pass = containerCreate.querySelector('#pass').value;
-	let mail = containerCreate.querySelector('#mail').value;
-	let passRepeat = containerCreate.querySelector('#pass-repeat').value;
-    
-    let result = verifyPass(pass, passRepeat)
-    
-    if (result === true){
-        createAccount(mail, pass);
-    }else {
-        alert("Las contraseñas no coinciden")
-    }
-        
+        let pass = containerCreate.querySelector('#pass').value;
+        let mail = containerCreate.querySelector('#mail').value;
+        let passRepeat = containerCreate.querySelector('#pass-repeat').value;
+        let result = verifyPass(pass, passRepeat)
+
+        if (result === true) {
+            createAccount(mail, pass);
+        } else {
+            alert("Las contraseñas no coinciden")
+        }
+
     })
     return containerCreate;
 }
