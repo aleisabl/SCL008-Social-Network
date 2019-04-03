@@ -4,6 +4,7 @@ export const templateCreate = () => {
     //creamos div que contendrá la plantilla
     const containerCreate = document.createElement('div');
     const contentCreate = `
+      
           <div class='' id="green-columns">
             <div id="logo-welcome" >
                 
@@ -27,7 +28,9 @@ export const templateCreate = () => {
             </div>
             <div >
                 <button id="create" class="sign-in-style">Crear cuenta</button>
-            </div>    
+            </div>
+          
+    
    `;
 
     //pasar cel contenido al div

@@ -2,6 +2,8 @@ import { templateLogin } from './assets/views/templateLogin.js'
 
 import { templateCreate } from './assets/views/templateCreate.js'
 
+import { templateTimeLine } from './assets/views/templateTimeLine.js'
+
 /*  crear una función que reciba el hash # y según la coincidencia retorne otra función que va 
     a imprimir el template en nuestro HTML 
 */
@@ -12,6 +14,9 @@ const changeRouter = (hash) => {
     }
 
     if (hash === '#/create') {
+        return showTemplate(hash);
+    }
+    if (hash === '#/timeline') {
         return showTemplate(hash);
     }
 }
@@ -29,10 +34,13 @@ const showTemplate = (hash) => {
             containerRoot.appendChild(templateLogin());
             break;
         case 'create':
-            containerRoot.appendChild(templateCreate());
-            break;
-        default:
-            containerRoot.innerHTML = '<p>Error 404</p>'
+        containerRoot.appendChild(templateCreate());
+        break;
+        case 'timeline':
+        containerRoot.appendChild(templateTimeLine());
+        break;
+        default: 
+        containerRoot.innerHTML = '<p>Error 404</p>'
     }
 }
 

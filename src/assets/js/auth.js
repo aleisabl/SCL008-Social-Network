@@ -32,12 +32,21 @@ export const createAccount = (email, password) => {
 	return 'cuenta creada OK';
 }
 
-export const verifyPass = (pass, passRepeat) => {
+export const signIn = (email,password) => {
+	firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+  // Handle Errors here.
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  // ...
+});
+}
 
-	if (pass === passRepeat) {
+export const verifyPass = (pass, passRepeat) => {
+  if (pass === passRepeat) {
 		return true;
 	}
 	else {
 		return false;
 	}
 } 
+	
