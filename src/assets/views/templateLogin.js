@@ -5,6 +5,10 @@
 
 import { loginGoogle } from './../js/auth.js';
 
+import { signIn } from './../js/auth.js';
+
+
+
 export const templateLogin = () => {
     //creamos div que contendrá la plantilla
     const containerLogin = document.createElement('div');
@@ -16,14 +20,14 @@ export const templateLogin = () => {
             </div>
             <div class="cfield">
                 <i class="fas fa-user-alt"></i>
-                <input type="email"  placeholder="Correo" name="">
+                <input type="email" id="correo"  placeholder="Correo" name="">
             </div>
             <div class="cfield">
                 <i class="fas fa-key"></i>
-               <input type="password" placeholder="Contraseña" name="">
+               <input type="password" id="password-sign-in"placeholder="Contraseña" name="">
             </div>
             <div >
-                <button id="sign-in" class="sign-in-style">Iniciar Sesión</button>
+                <a id="sign-in" href="#/timeline" class="sign-in-style">Iniciar Sesión</a>
             </div>
             
             
@@ -57,16 +61,17 @@ export const templateLogin = () => {
     btn.addEventListener('click', () => {
         loginGoogle();
     })
+
+    const btnLogin = containerLogin.querySelector('#sign-in')
+
+    btnLogin.addEventListener('click', () => {
+        let passwordSign = containerLogin.querySelector('#password-sign-in').value;
+        let emailSign = containerLogin.querySelector('#correo').value;
+
+        signIn(emailSign,passwordSign)
+        
+    })
     return containerLogin;
 }
 
 
-/* export const hello = () => 'hello';
-
-export const add = (x, y) => {
-    if(typeof x != 'number' || typeof y != 'number'){
-        return null;
-    }
-
-    return x + y;
-} */
