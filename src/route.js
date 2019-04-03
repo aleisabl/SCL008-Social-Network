@@ -13,7 +13,7 @@ const changeRouter = (hash) => {
         return showTemplate(hash);
     }
 
-    if (hash === '#/create'){
+    if (hash === '#/create') {
         return showTemplate(hash);
     }
     if (hash === '#/timeline') {
@@ -26,14 +26,13 @@ const showTemplate = (hash) => {
     const router = hash.substring(2);
     const containerRoot = document.getElementById('root');
     containerRoot.innerHTML = '';
-    
-    
+
     //hacemos el match del hash utilizado y el template que quiero msotrar
 
     switch (router) {
         case 'login':
-        containerRoot.appendChild(templateLogin());
-        break;
+            containerRoot.appendChild(templateLogin());
+            break;
         case 'create':
         containerRoot.appendChild(templateCreate());
         break;
@@ -49,21 +48,18 @@ const showTemplate = (hash) => {
     y en su defecto showTemplate() 
  */
 
- export const initRouter = () => {
-     window.addEventListener('load', changeRouter(window.location.hash));
+export const initRouter = () => {
+    window.addEventListener('load', changeRouter(window.location.hash));
 
-     const containerRoot = document.getElementById('root');
-     containerRoot.appendChild(templateLogin());
-     
+    const containerRoot = document.getElementById('root');
+    containerRoot.appendChild(templateLogin());
 
+    //reconoce un cambio en el hash y le pasa ese nuevo hash a changeRouter
 
-
-     //reconoce un cambio en el hash y le pasa ese nuevo hash a changeRouter
-
-     if ('onhashchange' in window){
-         window.onhashchange = () => {
-             changeRouter(window.location.hash)
-         }
-     }
- }
+    if ('onhashchange' in window) {
+        window.onhashchange = () => {
+            changeRouter(window.location.hash)
+        }
+    }
+}
 
