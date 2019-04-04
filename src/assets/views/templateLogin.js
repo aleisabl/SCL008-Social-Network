@@ -11,6 +11,7 @@ import { signIn } from './../js/auth.js';
 
 export const templateLogin = () => {
     //creamos div que contendrá la plantilla
+    document.getElementById('root').innerHTML='';
     const containerLogin = document.createElement('div');
     const contentLogin = `
         <div class=''>
@@ -27,7 +28,8 @@ export const templateLogin = () => {
                <input type="password" id="password-sign-in"placeholder="Contraseña" name="">
             </div>
             <div >
-                <a id="sign-in" href="#/timeline" class="sign-in-style">Iniciar Sesión</a>
+                
+                <button id="sign-in" class="sign-in-style" onclick="window.location.href='#/timeline'">Iniciar Sesión</button>
             </div>
             
             
@@ -69,9 +71,10 @@ export const templateLogin = () => {
         let emailSign = containerLogin.querySelector('#correo').value;
 
         signIn(emailSign,passwordSign)
-        
+        containerLogin.innerHTML = '';
     })
+
+
     return containerLogin;
 }
-
 

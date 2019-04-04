@@ -1,7 +1,9 @@
+import { logOut } from './../js/auth.js';
 
 
 
 export const templateTimeLine = () =>{
+  document.getElementById('root').innerHTML='';
   const containerTimeLine = document.createElement('div');
   const contentTimeLine = `
                         <div class=''>
@@ -72,10 +74,19 @@ export const templateTimeLine = () =>{
                         </div>
                       </div>
                     </div>
-                    <footer>Footer</footer>`;
+                    <footer>Footer
+                    <a href="#/login" id="log-out">Cerrar Sesión </a></footer>`;
 
   containerTimeLine.innerHTML= contentTimeLine;
+  const btnLogOut = containerTimeLine.querySelector('#log-out');
+
+  btnLogOut.addEventListener('click', () =>{
+    logOut();
+    
+    containerTimeLine.innerHTML ='';
+  })
   return containerTimeLine;
+
 
 }
 
