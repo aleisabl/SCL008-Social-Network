@@ -43,12 +43,15 @@ Se realizó una encuesta para poder conocer más sobre las preferencias de los u
  https://trello.com/c/sKYpbDqK
 
 ## 4
- https://trello.com/c/9K69yN8g
+ https://trello.com/c/rPHkDMPB
 
  ## 5
- https://trello.com/c/Kdnpw4Ua
+ https://trello.com/c/9K69yN8g
  
  ## 6
+ https://trello.com/c/Kdnpw4Ua
+ 
+ ## 7
  https://trello.com/c/9MJOelZF
 
  ## **Prototipo de Baja Fidelidad** 
