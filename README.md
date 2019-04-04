@@ -14,9 +14,7 @@ Fue diseñado como
 ![](https://media.giphy.com/media/10bdAP4IOmoN7G/200w_d.gif)
 
 Testeado con
-*[JEST](https://jestjs.io/)
-![](https://doc.ebichu.cc/jest/img/blog/19-typeahead-pattern.gif)
-
+* [JEST](https://jestjs.io/)
 
 ## **Definición de usuario**
 
