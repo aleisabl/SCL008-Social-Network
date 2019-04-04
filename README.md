@@ -4,6 +4,20 @@
 
 AllergyBites es una red social que da una plataforma para publicar y ver recetas e información sobre salud y alimentación, para todas aquellas personas que tengan algún problema con la alimentación o simplemente tengan habitos alimenticios específicos o diferentes.
 
+## **Lenguajes y herramientas utilizadas en el código**
+
+Todo el código fue realizado con Vanilla Javascript y CSS puro, no se utilizó ninguna librería o frameworks. 
+Fue diseñado como 
+* [Mobile first Design](https://www.mediaclick.es/blog/diseno-web-responsive-design-y-la-importancia-del-mobile-first/) 
+* [Single page Application](https://es.wikipedia.org/wiki/Single-page_application) 
+
+![](https://media.giphy.com/media/10bdAP4IOmoN7G/200w_d.gif)
+
+Testeado con
+*[JEST](https://jestjs.io/)
+![](https://doc.ebichu.cc/jest/img/blog/19-typeahead-pattern.gif)
+
+
 ## **Definición de usuario**
 
 Se realizó una encuesta para poder conocer más sobre las preferencias de los usuarios al momento de necesitar una red social para sus mascotas. De el 100% de los encuestados, el 73% de ellos quiere encontrar el el sitio rcetas fit o saludables, el 22% están interesados en ver contenido sobre recetas aptas para veganos o vegetarianos, el 8% quiere ver recetas aptas para personas diabéticas y dentro de estas necesidades tambien encontramos ususrios que desean ver recetas aptas para personas con intolerancia a la a lactosa.
