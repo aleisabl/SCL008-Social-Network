@@ -1,315 +1,132 @@
-# Creando una Red Social
+# AllergyBites
 
-## Índice
+## **Descripción**
 
-* [Preámbulo](#preámbulo)
-* [Resumen del proyecto](#resumen-del-proyecto)
-* [Objetivos de aprendizaje](#objetivos-de-aprendizaje)
-* [Consideraciones generales](#consideraciones-generales)
-* [Parte obligatoria](#parte-obligatoria)
-* [Hacker Edition](#hacker-edition)
-* [Consideraciones técnicas](#consideraciones-técnicas-front-end)
-* [Contenido de referencia](#pistas-/-tips-/-lecturas-complementarias)
+AllergyBites es red social para todas aquellas personas que tengan algun problema con la alimenracion o simplemente tengan habitos alimenticios especificos o diferentes, que da información sobre salud y alimentación, con la cual pueden filtrar recetas de acuerdo a sus necesidades.
 
-***
+## **Definición de usuario**
 
-## Preámbulo
+Se realizó una encuesta para poder conocer más sobre las preferencias de los usuarios al momento de necesitar una red social para sus mascotas. De el 100% de los encuestados, el 73% de ellos quiere encontrar el el sitio rcetas fit o saludables, el 22% están interesados en ver contenido sobre recetas aptas para veganos o vegetarianos, el 8% quiere ver recetas aptas para personas diabéticas y dentro de estas necesidades tambien encontramos ususrios que desean ver recetas aptas para personas con intolerancia a la a lactosa.
 
-Instagram, Snapchat, Twitter, Facebook, Twitch, Linkedin, etc. Las redes
-sociales han invadido nuestras vidas. Las amamos u odiamos, y muchos no podemos
-vivir sin ellas.
+## **Necesidades del Usuario**
 
-Hay redes sociales de todo tipo y para todo tipo de intereses. Por ejemplo,
-en una ronda de financiamiento con inversionistas, se presentó una red social
-para químicos en la que los usuarios podían publicar artículos sobre sus
-investigaciones, comentar en los artículos de sus colegas, y filtrar artículos
-de acuerdo a determinadas etiquetas o su popularidad, lo más reciente, o lo
-más comentado.
+* Poder inscribirse en una red social parecida a imstagram.
+* Poder inscribirse en una red social que se adapte a sus necesidades alimenticias.
+* subir información sobre recetas aptas para todos aquellos con necesidades especiales.
+* Recibir información sobre recetas aptas para ellos.
 
-## Resumen del proyecto
 
-En este proyecto construirás una Red Social sobre lo que decidan tú y tu equipo.
-Podría ser, por ejemplo, sobre alimentación saludable, feminismo, educación,
-salud, energías renovables, amantes de las [empanadas](https://es.wikipedia.org/wiki/Empanada) o de
-los [tacos de canasta](https://es.wikipedia.org/wiki/Taco), etc.
 
-Tu Red Social tendrá que permitir a cualquier usuario crear una cuenta de
-acceso y loguearse con ella; crear, editar, borrar y _"likear"_ publicacciones.
+## **Historias de Usuario:**
 
-## Objetivos de Aprendizaje
+## 1 
+ Yo como usuario habitual de redes sociales quiero que el tema de esta red social sea alimentación o recetas y que se parezca a instagram porque uso habitualmente esta red y me parece cómoda.
 
-El objetivo principal de aprendizaje de este proyecto es construir una
-[Single-page Application (SPA)](https://es.wikipedia.org/wiki/Single-page_application)
-[_responsive_](https://github.com/Laboratoria/curricula-js/tree/master/topics/css/02-responsive)
- (con más de una vista / página) en la que podamos **leer y escribir datos.**
+### definicion of done 
+El usuario puede ver como vista principal el inicio de sesión
+El usuario puede ingresar su correo y su contraseña
+El usuario tiene como opción adicional loguear con su cuenta de google
+El nuevo usuario puede presionar el link de registrarse
+El nuevo usuario puede ingresar en un nuevo formulario sus datos de registro como nombre, apellido, email, nueva contraseña, repetir contraseña
+El usuario al ingresar incorrectamente su contraseña o su correo mostrará un mensaje de error subjetivo para evitar entregar demasiada información.
 
-## Consideraciones generales
 
-- Este proyecto se debe "resolver" en tríos.
+## 2
+ Yo como nuevo usuario quiero poder registrarme y loguearme con mi cuenta personal y con mi cuenta de google porque quiero subir mis propias recetas y acceder fácilmente
 
-- La lógica del proyecto debe estar implementada completamente en JavaScript (ES6+),
-HTML y CSS :smiley:. Para este proyecto no está permitido utilizar
-frameworks o librerías de CSS y JS.
+### definicion of done 
 
-- La división del trabajo debe permitir que todo el equipo
-practique el aprendizaje de todo lo esperado **cada sprint**. _No se dividan el
-trabajo como en una fábrica._
+El código permite comunicarse con la base de datos y mostrar los post realizados recientemente
+El diseño permite que al hacer click en la receta se muestre un modal o una nueva página con la receta.
+La interfaz además permite guardar las recetas a las que el usuario dió like
+El diseño incluye un menú con accesos directos a las otras secciones de la aplicación
+El diseño cumple con las heuristicas de usabilidad
+El código tiene y pasa los test necesarios
+El código debe implementarse como SPA y diseñado como mobile first
+La historia implementada tiene al menos 3 testeos de usabilidad y se realizan mejoras en base a ello
 
-- Trabajen en una sola historia por vez, no pueden avanzar a la siguiente sin
-haber completado la anterior.
 
-Para comenzar tendrás que hacer un _fork_ y _clonar_ este
-repositorio.
+## 3
+ Yo como usuario ya logueado, quiero ver como pantalla principal las recetas más recientes para poder revisarlas de inmediato apenas ingreso
 
-## Parte obligatoria
+### definicion of done 
 
-### General
+* El código y el diseño cumple con el tema establecido (colores, diseño)
+* El código guarda las preferencias del usuario
+* Existe código que permite filtrar las recetas para la lista indicada en las encuestas
+* El código permite que muestre todo el detalle de las recetas
+* El código tiene y pasa los test necesarios
+* La historia implementada ha sido testeada con al menos 3 usuarios y se han realizado mejoras en base a ello.
+* El código debe implementarse como SPA y diseñado como mobile first
 
-Este proyecto no incluye un _boilerplate_, así es que tendrás que definir la
-estructura de carpetas y escribir tus propias Pruebas Unitarias (tests). Para
-hacerlo, puedes guiarte de los proyectos anteriores.
 
-### Definición del producto
+## 4
+ Yo como persona con enfermedades alimentarias quiero que la aplicación se centre en filtrar recetas para mi condición porque es más accesible y cómodo.
 
-En el `README.md` cuéntanos brevemente cómo descubriste las necesidades de los
-usuarios y cómo llegaste a la definición final de tu producto. Comparte fotos de
-entrevistas (si las tienes), cuestionarios y tus sketches/(bocetos).
+ ### definicion of done 
 
-Es importante que detalles:
+* El código permite guardar la fotografía en su base de datos
+* El código permite listar y guardar los post de cada usuario en su perfil
+* El código tiene y pasa los test necesarios
+* La historia implementada ha sido testeada con al menos 3 usarios y se han incorporado mejoras
+* El código debe implementarse como SPA y diseñado como mobile first
 
-* Quiénes son los principales usuarios de producto.
-* Qué problema resuelve el producto / para qué le servirá a estos usuarios.
 
-### Historias de usuario
+ ## 5
+ Yo como usuario muy respetuoso en las redes sociales quiero poder reportar si un post me parece ofensivo o erróneo porque considero que una red social sin ofensas es lo más sano.
 
-Una vez que entiendas las necesidades de tus usuarixs, escribe las Historias de
-Usuario que representen todo lo que necesitan hacer/ver en la Red Social.
+### definicion of done 
 
-Cada una de tus Historias de Usuario debe tener:
-- **Criterios de Aceptación:** todo lo que debe ocurrir para satisfacer las
-  necesidades del usuario.
+* El código cumple con la guía de estilos acordada para esta esquina de opciones
+* El código está en el repositorio
+* El código envía de forma interna los desarrolladores datos de publicaciones marcadas como reportes
+* El código contiene una sección de condiciones de uso
+* La historia implementada tiene como mínimo 3 test de usabilidad y se han incorporado mejoras
 
-- **Definición de terminado:** todos los aspectos técnicos que deben cumplirse
-para que, como equipo, sepan que esa historia está terminada y lista
-para publicarse. **Todas** tus Historias de Usuario (salvo excepciones), deben
-incluir estos aspectos en su Definición de Terminado (más todas las que
-  necesiten agregar):
 
-  * Debe ser una SPA.
-  * Debe ser _responsive_.
-  * Debes haber recibido _code review_ de al menos una compañera de otro equipo.
-  * Haces _test_ unitarios y, además, has testeado tu producto manualmente.
-  * Hiciste _pruebas_ de usabilidad e incorporaste el _feedback_ del usuario.
-  * Desplegaste tu aplicación y has etiquetado tu versión (git tag).
-
-### Diseño de la Interfaz de Usuario (prototipo de baja fidelidad)
-
-Debes definir cuál será el flujo que seguirá el usuario dentro de tu producto y
-con eso deberás diseñar la Interfaz de Usuario (UI por sus siglas en inglés) de
-esta red social que siga este flujo.
-Este diseño debe representar la solución que se implementará finalmente en
-código.
-
-### Responsive
-
-Debe verse bien en dispositivos de pantallas grandes
-(computadoras/es, laptops, etc.) y pequeñas (tablets, celulares, etc.). Te
-sugerimos seguir la técnica de `mobile first` (más detalles sobre esta técnica
-al final).
-
-### Pruebas unitarias (unit tests)
-
-Los tests unitarios deben cubrir un mínimo del 70% de _statements_, _functions_,
-_lines_, y _branches_.
-
-### Implementación de la Interfaz de Usuario (UI y comportamiento de Interfaz de Usuario)
-
-Estas son consideraciones para que escribas las Definiciones de Terminado de
-tus H.U.:
-
-#### Creación de cuenta de usuario e inicio de sesión
-
-* Login con Firebase:
-  - Para el login y las publicaciones en el muro puedes utilizar [Firebase](https://firebase.google.com/products/database/)
-  - Creación de cuenta de acceso y autenticación con cuenta de correo y
-    contraseña, y con cuenta de Google.
-* Validaciones:
-  - La aplicación solo permitirá el acceso a usuarios con cuentas válidas.
-  - No pueden haber usuarios repetidos.
-  - La cuenta de usuario debe ser un correo electrónico válido.
-  - Lo que se escriba en el campo (_input_) de contraseña debe ser secreto.
-* Comportamiento:
-  - Al enviarse un formulario de registro o inicio de sesión, debe validarse.
-  - En caso haya errores, el sistema debe mostrar mensajes de error para
-    ayudar al usuario a corregirlos.
-  - Al recargar la aplicación, se debe verificar si el usuario está
-    logueado antes de mostrarle el contenido.
-
-
-#### Muro/timeline de la red social
-
-* Validaciones:
-  - Al apretar el botón de publicar, debe validar que exista contenido en
-  el _input_.
-* Comportamiento:
-  - Poder publicar un _post_.
-  - Poder dar y quitar _like_ a una publicación.
-  - Llevar un conteo de los _likes_.
-  - Poder eliminar un post específico.
-  - Pedir confirmación antes de eliminar un _post_.
-  - Al dar _click_ para editar un _post_, debe cambiar el texto por un _input_
-    que permita editar el texto y luego guardar los cambios.
-  - Al guardar los cambios debe cambiar de vuelta a un texto normal pero con la
-    información editada.
-  - Al recargar la página debo de poder ver los textos editados.
-
-### Hacker edition
-
-* Permite crear posts con imágenes.
-* Permite buscar usuarios, agregar y eliminar "amigos".
-* Permite definir la privacidad de los _posts_ (público o solamente para amigos).
-* Permite ver su muro de cualquier usuario "no-amigo" (solamente los
-  posts _públicos_).
-* Permite comentar o responder una publicación.
-* Permite editar perfil.
-
-### Consideraciones técnicas Front-end
-
-El corazón de este proyecto incluye:
-
-* Separar la manipulación del DOM de la lógica (Separación de responsabilidades).
-* Contar con multiples vistas para esto tu aplicacion debera ser una
- [Single Page Application (SPA)](https://es.wikipedia.org/wiki/Single-page_application)
-* Que el sitio sea responsive, ya dicho.
-* Alterar y persistir datos. Los datos que agregues o modifiques deberán
-  persistir a lo largo de la aplicación, te recomendamos que uses
-  [Firebase](https://firebase.google.com/).
-
-Además, podrías agregar algunas tareas nuevas de acuerdo a tus decisiones:
-
-* Recuerda que no hay un setup de **tests** definido, dependerá de
-  la estructura de tu proyecto también, pero algo que no debes de olvidar es
-  pensar en éstas pruebas, incluso te podrían ayudar a definir la estructura y
-  nomenclatura de tu lógica.
-
-### Consideraciones técnicas UX
-
-Desde el punto de vista de UX, deberás:
-
-* Hacer al menos 2 o 3 entrevistas con usuarios.
-* Hacer un  prototipo de baja fidelidad.
-* Asegurarte de que la implementación en código siga los lineamientos del
-  diseño.
-* Hacer sesiones de testing con el producto en HTML.
-
-## Entrega
-
-El proyecto será _entregado_ subiendo tu código a GitHub (`commit`/`push`) y la
-interfaz será desplegada usando GitHub pages u otro servicio de hosting que
-puedas haber encontrado en el camino.
-
-## Evaluación
-
-Recuerda revisar la [rúbrica](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vRktPN4ilZtkRN5tUb3DVhgeihwlzk63_-JI3moA-bXpKDbHDioAK2H3qbrwWNb0Ql4wX22Tgv7-PDv/pubhtml)
-para ver la descripción detallada de cada habilidad y cada nivel. Esta es una
-lista de todas las habilidades involucradas en este proyecto y que evaluaremos
-cuando lo completes:
-
-### Habilidades Blandas/Socioemocionales
-
-| Habilidad |
-|-----------|
-| Planificación y organización |
-| Autoaprendizaje |
-| Solución de Problemas |
-| Dar y recibir feedback |
-| Adaptabilidad |
-| Trabajo en equipo |
-| Responsabilidad |
-| Comunicación eficaz |
-| Presentaciones |
-
-
-### Habilidades Técnicas, Front-end
-
-| Habilidad |
-|-----------|
-| **JavaScript** |
-| Estilo |
-| Nomenclatura/semántica |
-| Funciones/modularidad |
-| Estructuras de datos |
-| Tests |
-| **HTML** |
-| Validación |
-| Estilo |
-| Semántica |
-| SEO |
-| **CSS** |
-| DRY |
-| Responsive |
-| **SCM** |
-| Git |
-| GitHub |
-| **CS** |
-| Lógica |
-| Arquitectura |
-
-### Habilidades Técnicas, UX
-
-| Habilidad |
-|-----------|
-| User Centricity |
-| Visual Desing |
-
-***
-
-## Pistas / Tips / Lecturas complementarias
-
-### Mobile first
-
-El concepto de [_mobile first_](https://www.mediaclick.es/blog/diseno-web-responsive-design-y-la-importancia-del-mobile-first/)
-hace referencia a un proceso de diseño y desarrollo donde partimos de cómo se ve
-y cómo funciona la aplicación en un dispositivo móvil primero, y más adelante se
-ve como adaptar la aplicación a pantallas progresivamente grandes y
-características específicas del entorno desktop. Esto es en contraposición al
-modelo tradicional, donde primero se diseñaban los websites (o webapps) para
-desktop y después se trataba de _arrugar_ el diseño para que entre en pantallas
-más chicas. La clave acá es asegurarse de que desde el principio diseñan usando
-la vista _responsive_ de las herramientas de desarrollador (developer tools) del
-navegador. De esa forma, partimos de cómo se ve y comporta la aplicación en una
-pantalla y entorno móvil.
-
-### Múltiples vistas
-
-En proyectos anteriores nuestras aplicaciones habían estado compuestas de una
-sola _vista_ principal (una sóla _página_). En este proyecto se introduce la
-necesidad de tener que dividir nuestra interfaz en varias _vistas_ o _páginas_
-y ofrecer una manera de navegar entre estas vistas. Este problema se puede
-afrontar de muchas maneras: con archivos HTML independientes (cada uno con su
-URL) y links tradicionales, manteniendo estado en memoria y rederizando
-condicionalmente (sin refrescar la página), [manipulando el historial del
-navegador](https://developer.mozilla.org/es/docs/DOM/Manipulando_el_historial_del_navegador)
-con [`window.history`](https://developer.mozilla.org/es/docs/Web/API/Window/history).
-En este proyecto te invitamos a explorar opciones y decidir una opción
-de implementación.
-
-### Escritura de datos
-
-En los proyectos anteriores hemos consumido (leído) datos, pero todavía no
-habíamos escrito datos (salvar cambios, crear datos, borrar, ...). En este
-proyecto tendrás que crear (salvar) nuevos datos, así como leer, actualizar y
-modificar datos existentes. Estos datos se podrán guardar de forma remota
-usando [Firebase](https://firebase.google.com/).
-
-Otras:
-
-* [Modulos: Export](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/export)
-* [Modulos: Import](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/import)
-* [Diseño web, responsive design y la importancia del mobile first - Media Click](https://www.mediaclick.es/blog/diseno-web-responsive-design-y-la-importancia-del-mobile-first/)
-* [Mobile First: el enfoque actual del diseño web móvil - 1and1](https://www.1and1.es/digitalguide/paginas-web/diseno-web/mobile-first-la-nueva-tendencia-del-diseno-web/)
-* [Mobile First - desarrolloweb.com](https://desarrolloweb.com/articulos/mobile-first-responsive.html)
-* [Mobile First - ZURB](https://zurb.com/word/mobile-first)
-* [Mobile First Is NOT Mobile Only - Nielsen Norman Group](https://www.nngroup.com/articles/mobile-first-not-mobile-only/)
-
-***
+ ## 6
+
+Yo como usuario de esta aplicación de recetas quiero poder publicar mis propias recetas para aportar a la comunidad.
+
+### definicion of done 
+
+
+ ## 7
+Yo como usuario que siempre escribe posts quiero poder eliminar o editar mi contenido en caso de equivocación para que no existan errores.
+
+### definicion of done 
+
+* El código permite borrar completamente la publicación
+* El código permite que en la misma pantalla se pueda editar el post
+* El código tiene y pasa los test necesarios
+* El diseño de opciones de post en la esquina cumple con diseño acordado
+* El código está en el repositorio
+* La historia implementada tiene al menos 3 test de usabilidad y se han incorporado mejoras
+* El código debe implementarse como SPA y diseñado como mobile first
+
+
+
+
+ ## **Prototipo de Baja Fidelidad** 
+
+Se realizó un sketch con papel y lápiz tratando de mostrar los resultados obtenidos con todos los requerimientos que recabamos.
+
+ El prototipo de esta página consta de 6 pantallas. La primera es donde el usuario inicia su sesión,la cual puede ser con una cuenta creada desde la aplicación con su email y contraseña, mediante su cuenta de Gmail o mediante su cuenta Google, si no esta registrado y no quiere iniciar sesión desde Google, hay un link que dice "registrate aquí" y se abre otra pantalla donde puede ingresar sus datos y crear su cuenta con clave.
+
+
+Una vez registrado o iniciado sesión se abre otra pantalla de nuestra red social, donde puede ver las publicaciones de otros usuarios. En la parte superior hay un buscador donde damos la opción al usuario de filtrar las recetas de su interés. Los post se pueden comentar dar "likes", eliminar y editarlo, lo mismo para los comentarios. En la parte inferior aparecen cuatro imágenes/símbolos:  "home"" (damos la opción de volver al inicio de las publicaciones), "corazon" (que lleva a la pantalla de favoritos), "+/ agregar" (con este símbolo se puede crear un post) y "perfil una persona" (al hacer "click" se despliega una pantalla donde puede ver su perfil).
+
+Al hacer "click" en iniciar sesión, aparece otra pantalla donde se puede hacer una publicacion, donde podra colocar el nombre de su receta, el tiemṕo que tarda en realizarse la receta, los ingredientes, la preparación, tiene la opcion de subir una imagen de su platillo y por ultimo puede subir su receta.
+
+ ![imagen 1](/assets/Moodboard/prototipodebaja.png)
+
+## **Prototipo de Alta Fidelidad**
+
+ Se desarrolló un prototipo en Figma, el cual permitió imitar el aspecto y el comportamiento de una interfaz real.
+ Se puede ver un prototipo directamente en el link <https://www.figma.com/file/GZ3MUWOwxFolx3QFkn19xIX5/Social-Network?node-id=1%3A42> para el figma
+
+### **Planificación en Trello**
+
+Para planificar y coordinar el trabajo se utilizó Trello
+la cual se puede ver en siguiente link
+https://trello.com/b/0UWGSXXH/proyecto-3-red-social
