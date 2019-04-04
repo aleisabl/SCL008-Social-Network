@@ -68,7 +68,7 @@ Al hacer "click" en iniciar sesión, aparece otra pantalla donde se puede hacer 
  Se desarrolló un prototipo en Figma, el cual permitió imitar el aspecto y el comportamiento de una interfaz real.
  Se puede ver el prototipo directamente en el link:
 
- https://www.figma.com/file/twBVSXlWjBVOt0VIBjHZWm/Social-Network?node-id=207%3A0
+https://www.figma.com/proto/twBVSXlWjBVOt0VIBjHZWm/Social-Network?node-id=207%3A14&scaling=scale-down
 
 ### **Testeos de Usabilidad**
 Por cada historia de usuario terminada se recibió feedback de distintas personas y se grabaron algunas con Loom utilizando nuestro prototipo de alta fidelidad:
