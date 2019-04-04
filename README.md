@@ -58,6 +58,13 @@ Al hacer "click" en iniciar sesión, aparece otra pantalla donde se puede hacer 
 
  https://www.figma.com/file/twBVSXlWjBVOt0VIBjHZWm/Social-Network?node-id=207%3A0
 
+### **Testeos de Usabilidad**
+Por cada historia de usuario terminada se recibió feedback de distintas personas y se grabaron algunas con Loom utilizando nuestro prototipo de alta fidelidad:
+
+https://www.useloom.com/share/6e2a1b96a498427f88d284e556276c96
+
+https://media.giphy.com/media/7MZ0v9KynmiSA/giphy-downsized.gif
+
 ### **Planificación en Trello**
 
 Para planificar y coordinar el trabajo se utilizó Trello
