@@ -49,7 +49,7 @@ Una vez registrado o iniciado sesión se abre otra pantalla de nuestra red socia
 
 Al hacer "click" en iniciar sesión, aparece otra pantalla donde se puede hacer una publicacion, donde podra colocar el nombre de su receta, el tiemṕo que tarda en realizarse la receta, los ingredientes, la preparación, tiene la opcion de subir una imagen de su platillo y por ultimo puede subir su receta.
 
- ![imagen 4](src/assets/Moodboard/prototipodebaja.png)
+ ![imagen 4](src/assets/Moodboard/sketch.jpg)
 
 ## **Prototipo de Alta Fidelidad**
 
