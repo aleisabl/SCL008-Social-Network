@@ -56,3 +56,9 @@ export const signIn = (email,password) => {
   // ...
 });
 }
+
+
+
+export const logOut = () => {
+	firebase.auth().signOut();
+}

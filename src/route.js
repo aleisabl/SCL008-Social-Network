@@ -7,8 +7,8 @@ import { templateTimeLine } from './assets/views/templateTimeLine.js'
 /*  crear una función que reciba el hash # y según la coincidencia retorne otra función que va 
     a imprimir el template en nuestro HTML 
 */
-
 const changeRouter = (hash) => {
+
     if (hash === '#/login') {
         return showTemplate(hash);
     }
@@ -17,6 +17,9 @@ const changeRouter = (hash) => {
         return showTemplate(hash);
     }
     if (hash === '#/timeline') {
+        return showTemplate(hash);
+    }
+    if(hash === '' ){
         return showTemplate(hash);
     }
 }
@@ -31,14 +34,49 @@ const showTemplate = (hash) => {
     //hacemos el match del hash utilizado y el template que quiero msotrar
 
     switch (router) {
-        case 'login':
-        containerRoot.appendChild(templateLogin());
+        case 'login': 
+            firebase.auth().onAuthStateChanged(firebaseUser => {
+                if (firebaseUser) {
+                    console.log(firebaseUser);
+                    console.log("estoy en el metodo login");
+                    return containerRoot.appendChild(templateTimeLine());
+                }
+                else{
+                    console.log("Debes registrarte para poder ingresar");
+                   return containerRoot.appendChild(templateLogin()); 
+                }
+                });
+        
         break;
         case 'create':
-        containerRoot.appendChild(templateCreate());
+            firebase.auth().onAuthStateChanged(firebaseUser => {
+                if (firebaseUser) {
+                    console.log(firebaseUser);
+                    return containerRoot.appendChild(templateTimeLine());
+                }
+                else{
+                    console.log("Debes registrarte para poder ingresar");
+                    /*containerRoot.innerHTML= templateCreate();*/
+                     return containerRoot.appendChild(templateCreate());
+                }
+        });
         break;
         case 'timeline':
-        containerRoot.appendChild(templateTimeLine());
+            firebase.auth().onAuthStateChanged(firebaseUser => {
+                if (firebaseUser) {
+                    console.log(firebaseUser);
+                    return containerRoot.appendChild(templateTimeLine());
+                }
+                else{
+                    console.log("Debes registrarte para poder ingresar");
+                    return containerRoot.appendChild(templateLogin());
+
+                }
+        });
+        break;
+        case '' :
+            console.log("salí");
+            containerRoot.appendChild(templateLogin());
         break;
         default: 
         containerRoot.innerHTML = '<p>Error 404</p>'
@@ -51,9 +89,18 @@ const showTemplate = (hash) => {
 
  export const initRouter = () => {
      window.addEventListener('load', changeRouter(window.location.hash));
-
-     const containerRoot = document.getElementById('root');
-     containerRoot.appendChild(templateLogin());
+     firebase.auth().onAuthStateChanged(firebaseUser => {
+        const containerRoot = document.getElementById('root');
+                if (firebaseUser) {
+                    console.log(firebaseUser);
+                    return containerRoot.appendChild(templateTimeLine());
+                }
+                else{
+                    console.log("Debes registrarte para poder ingresar");
+                    containerRoot.appendChild(templateLogin());
+                }
+     })
+     
      
 
 
