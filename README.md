@@ -65,6 +65,8 @@ https://www.useloom.com/share/6e2a1b96a498427f88d284e556276c96
 
 https://media.giphy.com/media/7MZ0v9KynmiSA/giphy-downsized.gif
 
+https://media.giphy.com/media/7MZ0v9KynmiSA/giphy.mp4
+
 ### **Planificación en Trello**
 
 Para planificar y coordinar el trabajo se utilizó Trello
