@@ -41,6 +41,13 @@ export const signIn = (email,password) => {
 });
 }
 
+
+
+
+export const logOut = () => {
+	firebase.auth().signOut();
+}
+
 export const verifyPass = (pass, passRepeat) => {
   if (pass === passRepeat) {
 		return true;
@@ -50,3 +57,4 @@ export const verifyPass = (pass, passRepeat) => {
 	}
 } 
 	
+
