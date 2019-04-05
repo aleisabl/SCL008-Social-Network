@@ -86,9 +86,8 @@ if (user != null) {
                     <footer>
                     <a href="#/home"><img class="home" src='assets/Moodboard/home.png'  alt="home"></a>
                     <a href="#/likes"><img class="like" src='assets/Moodboard/like.png'  alt="like"></a>
-                    <a href="#/add"><img class="add" src='assets/Moodboard/add.png'  alt="add"></a>
+                    <a href="#/newrecipe"><img class="newRecipe" src='assets/Moodboard/add.png'  alt="newRecipe"></a>
                     <a href="#/profile"><img class="user" src='assets/Moodboard/user.png'  alt="user"></a>
-                    <i onclick="window.location.href='#/newrecipe'" class="fas fa-plus-square"></i>
                     </footer>`;
                     
           
