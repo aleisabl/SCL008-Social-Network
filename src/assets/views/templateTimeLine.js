@@ -1,18 +1,9 @@
-import { logOut } from './../js/auth.js';
 
 export const templateTimeLine = () =>{
   var user = firebase.auth().currentUser;
   var name, email, photoUrl, uid, emailVerified;
 
-if (user != null) {
-  name = user.displayName;
-  email = user.email;
-  photoUrl = user.photoURL;
-  emailVerified = user.emailVerified;
-  uid = user.uid;  // The user's ID, unique to the Firebase project. Do NOT use
-                   // this value to authenticate with your backend server, if
-                   // you have one. Use User.getToken() instead.
-}
+
   document.getElementById('root').innerHTML='';
   const containerTimeLine = document.createElement('div');
   const contentTimeLine = `
@@ -28,10 +19,7 @@ if (user != null) {
                           </div>
                         </div>
                       </div>
-                    </div>      
-                    <img class="avatar" src='${user.photoURL}' alt="avatar"> 
-                    <p font-size="1px">${user.email}</p>      
-                    <a href="#/login" id="log-out">Cerrar Sesión </a>        
+                    </div>          
                         <section class="options">
                             <i class="fas fa-search search-icon"></i>
                          <select>
@@ -93,13 +81,7 @@ if (user != null) {
           
 
   containerTimeLine.innerHTML= contentTimeLine;
-  const btnLogOut = containerTimeLine.querySelector('#log-out');
   
-  btnLogOut.addEventListener('click', () =>{
-    logOut();
-    
-    containerTimeLine.innerHTML ='';
-  })
   return containerTimeLine;
   
 }
