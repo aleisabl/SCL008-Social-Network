@@ -154,3 +154,8 @@ footer{
   margin-top: 8px;
 }
 
+#tipe-recipe{
+      display: -webkit-box;
+}
+
+

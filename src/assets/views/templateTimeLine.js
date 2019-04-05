@@ -74,7 +74,7 @@ export const templateTimeLine = () =>{
                         </div>
                       </div>
                     </div>
-                    <footer>Footer
+                    <footer> <i onclick="window.location.href='#/newrecipe'" class="fas fa-plus-square"></i>
                     <a href="#/login" id="log-out">Cerrar Sesión </a></footer>`;
 
   containerTimeLine.innerHTML= contentTimeLine;
