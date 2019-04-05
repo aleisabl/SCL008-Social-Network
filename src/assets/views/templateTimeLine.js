@@ -57,7 +57,7 @@ export const templateTimeLine = () =>{
                         </div>
                       </div>
                     </div>
-                    <div class='some-page-wrapper'>
+                    <div class=''>
                       <div class='row'>
                         <div class='column'>
                           <div class='grid-one'>
