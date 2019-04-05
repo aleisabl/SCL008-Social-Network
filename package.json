@@ -5,10 +5,11 @@
   "main": "src/index.html",
   "scripts": {
     "test": "jest --coverage",
-    "eslint": "eslint ext .js src/ test/",
-    "htmlhint": "htmlhint src/*.html",
+    "eslint": "eslint --ext .js src/ test/",
+    "htmlhint":"htmlhint src/*.html",
+    "pretest": "npm run eslint && npm run htmlhint",
     "deploy": "gh-pages -d src/"
-  },
+    },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/aleisabl/SCL008-Social-Network.git"
