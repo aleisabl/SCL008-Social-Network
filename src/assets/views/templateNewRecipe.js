@@ -10,22 +10,30 @@ export  const templateNewRecipe = () =>{
    const contentNewRecipe = `    <div class=''>
                       <div class='row '>
                         <div class='column'>
-                          <div class='logo'>
-                            
+                         <div class='grid-title'>
+                            Nueva Receta
                           </div>
                         </div>
                         <div class='column'>
-                          <div class='grid-title'>
-                            Allergy Bites
+                          <div class="more-info">
+                           
                           </div>
                         </div>
                       </div>
                     </div>
                 </div>
-                 <div style="height: 400px;">
+                 <div class="create-recipe">
+                  <div class="cfield">
+                     
+                     <input type="text" id="titleRecipe" placeholder="Titulo de tu receta">
+                  </div>
+                  <div class="">
+                     
+                     <textarea class="notes" cols="35" rows="6" placeholder="ingresa tu receta" id="description"></textarea>
+                  </div>
         
-                    <input type="text" id="titleRecipe" placeholder="Titulo de tu receta">
-                    <textarea placeholder="ingresa tu receta" id="description"></textarea>
+                    
+                    
                     <select id="tipe-recipe">
                         
                         <option value="celiaco">Celíaco</option>
@@ -35,8 +43,11 @@ export  const templateNewRecipe = () =>{
                     </select>
                     <button id="postBtn">Publicar</button>
                 </div>
-                    <footer>Footer
-                    <a href="#/login" id="log-out">Cerrar Sesión </a></footer>
+                    <footer><a href="#/timeline"><img class="home" src='assets/Moodboard/home.png'  alt="home"></a>
+                    <a href="#/likes"><img class="like" src='assets/Moodboard/like.png'  alt="like"></a>
+                    <a href="#/newrecipe"><img class="newRecipe" src='assets/Moodboard/add.png'  alt="newRecipe"></a>
+                    <a href="#/profile"><img class="user" src='assets/Moodboard/user.png'  alt="user"></a>
+                    </footer>
     `;
 
     containerNewRecipe.innerHTML= contentNewRecipe;
