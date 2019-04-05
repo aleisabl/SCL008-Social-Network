@@ -1,16 +1,11 @@
+import { logOut } from './../js/auth.js';
+
+
 export const templateProfile = () =>{
   var user = firebase.auth().currentUser;
   var name, email, photoUrl, uid, emailVerified;
 
-if (user != null) {
-  name = user.displayName;
-  email = user.email;
-  photoUrl = user.photoURL;
-  emailVerified = user.emailVerified;
-  uid = user.uid;  // The user's ID, unique to the Firebase project. Do NOT use
-                   // this value to authenticate with your backend server, if
-                   // you have one. Use User.getToken() instead.
-}
+
   document.getElementById('root').innerHTML='';
   const containerProfile = document.createElement('div');
   const contentProfile = `
@@ -25,7 +20,8 @@ if (user != null) {
                           <div>                           
                             ${user.displayName}
                             <img class="avatar" src='${user.photoURL}' alt="avatar"> 
-                            <p font-size="1px">${user.email}</p>   
+                            <p font-size="1px">${user.email}</p>
+                            <a href="#/login" id="log-out">Cerrar Sesión </a>    
                           </div>
                         </div>
                       </div>
@@ -33,10 +29,12 @@ if (user != null) {
 `;
 
   containerProfile.innerHTML= contentProfile;
-  const btnProfile = containerTimeLine.querySelector('#profile');
-
-  btnProfile.addEventListener('click', () =>{
-    return containerProfile;
+  const btnLogOut = containerProfile.querySelector('#log-out');
+  
+  btnLogOut.addEventListener('click', () =>{
+    logOut();
     
+    containerProfile.innerHTML ='';
   })
+  return containerProfile;
 }
