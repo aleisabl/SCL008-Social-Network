@@ -6,6 +6,8 @@ import { templateTimeLine } from './assets/views/templateTimeLine.js'
 
 import { templateProfile } from './assets/views/templateProfile.js'
 
+import { templateNewRecipe } from './assets/views/templateNewRecipe.js'
+
 /*  crear una función que reciba el hash # y según la coincidencia retorne otra función que va 
     a imprimir el template en nuestro HTML 
 */
@@ -25,6 +27,9 @@ const changeRouter = (hash) => {
         return showTemplate(hash);
     }
     if(hash === '' ){
+        return showTemplate(hash);
+    }
+    if (hash === '#/newrecipe') {
         return showTemplate(hash);
     }
 }
@@ -88,6 +93,19 @@ const showTemplate = (hash) => {
                 return containerRoot.appendChild(templateLogin());
 
             }
+        });
+        break;
+        case 'newrecipe':
+            firebase.auth().onAuthStateChanged(firebaseUser => {
+                if (firebaseUser) {
+                    console.log(firebaseUser);
+                    return containerRoot.appendChild(templateNewRecipe());
+                }
+                else{
+                    console.log("Debes registrarte para poder ingresar");
+                    return containerRoot.appendChild(templateLogin());
+
+                }
         });
         break;
         case '' :
