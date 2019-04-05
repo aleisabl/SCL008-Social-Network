@@ -154,8 +154,7 @@ footer{
   margin-top: 8px;
 }
 
-<<<<<<< HEAD
-.home, .like, .add, .user {
+.home, .like, .newRecipe, .user {
   margin: 18px;
   width: 40px;
 }
@@ -165,10 +164,6 @@ footer{
   border: 10px;
   border-radius: 20px;
 }
-=======
-#tipe-recipe{
+#tipe-recipe {
       display: -webkit-box;
 }
-
-
->>>>>>> ce8185393887826c64d616b6f63e54ff041c96bb
