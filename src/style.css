@@ -154,3 +154,13 @@ footer{
   margin-top: 8px;
 }
 
+.home, .like, .add, .user {
+  margin: 18px;
+  width: 40px;
+}
+
+.avatar {
+  width: 80px;
+  border: 10px;
+  border-radius: 20px;
+}

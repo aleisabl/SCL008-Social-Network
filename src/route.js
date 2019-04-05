@@ -4,6 +4,8 @@ import { templateCreate } from './assets/views/templateCreate.js'
 
 import { templateTimeLine } from './assets/views/templateTimeLine.js'
 
+import { templateProfile } from './assets/views/templateProfile.js'
+
 /*  crear una función que reciba el hash # y según la coincidencia retorne otra función que va 
     a imprimir el template en nuestro HTML 
 */
@@ -19,6 +21,9 @@ const changeRouter = (hash) => {
     if (hash === '#/timeline') {
         return showTemplate(hash);
     }
+    if (hash === '#/profile'){
+        return showTemplate(hash);
+    }
     if(hash === '' ){
         return showTemplate(hash);
     }
@@ -29,7 +34,6 @@ const showTemplate = (hash) => {
     const router = hash.substring(2);
     const containerRoot = document.getElementById('root');
     containerRoot.innerHTML = '';
-    
     
     //hacemos el match del hash utilizado y el template que quiero msotrar
 
@@ -68,10 +72,22 @@ const showTemplate = (hash) => {
                     return containerRoot.appendChild(templateTimeLine());
                 }
                 else{
-                    console.log("Debes registrarte para poder ingresar");
+                    alert("Debes registrarte para poder ingresar");
                     return containerRoot.appendChild(templateLogin());
 
                 }
+        });
+        break;
+        case 'profile':
+        firebase.auth().onAuthStateChanged(firebaseUser => {
+            if (firebaseUser) {
+                return containerRoot.appendChild(templateProfile());
+            }
+            else{
+                alert("Debes registrarte para poder ver tu perfil");
+                return containerRoot.appendChild(templateLogin());
+
+            }
         });
         break;
         case '' :
@@ -101,10 +117,6 @@ const showTemplate = (hash) => {
                 }
      })
      
-     
-
-
-
      //reconoce un cambio en el hash y le pasa ese nuevo hash a changeRouter
 
      if ('onhashchange' in window){
@@ -113,4 +125,3 @@ const showTemplate = (hash) => {
          }
      }
  }
-

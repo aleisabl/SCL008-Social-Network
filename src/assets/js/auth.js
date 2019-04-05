@@ -41,9 +41,6 @@ export const signIn = (email,password) => {
 });
 }
 
-
-
-
 export const logOut = () => {
 	firebase.auth().signOut();
 }
@@ -57,4 +54,13 @@ export const verifyPass = (pass, passRepeat) => {
 	}
 } 
 	
-
+ export const verifyUser = (firebaseUser) => {
+	if (firebaseUser) {
+		console.log('muestra timeline')
+		return true;
+	}
+	else{
+		console.log("Debes registrarte para poder ingresar");
+		return false;
+	}
+} 

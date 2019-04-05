@@ -6,8 +6,6 @@ import { loginGoogle } from './../js/auth.js';
 
 import { signIn } from './../js/auth.js';
 
-
-
 export const templateLogin = () => {
     //creamos div que contendrá la plantilla
     document.getElementById('root').innerHTML='';
@@ -28,11 +26,10 @@ export const templateLogin = () => {
                <input type="password" id="password-sign-in"placeholder="Contraseña" name="">
             </div>
 
-            <div >
-                
-
+            <div>
                 <button id="sign-in" class="sign-in-style" onclick="window.location.href='#/timeline'">Iniciar Sesión</button>
             </div>
+
             <div id="forgot-container">
                 <a href="#/forgot">Olvidaste tu contraseña?</a>
             </div>
