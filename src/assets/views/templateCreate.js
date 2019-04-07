@@ -1,11 +1,11 @@
-import { createAccount } from './../js/auth.js';
+import { createAccount, verifyPass } from './../js/auth.js';
 
 export const templateCreate = () => {
     //creamos div que contendrá la plantilla
     const containerCreate = document.createElement('div');
     const contentCreate = `
-        <div class='column'>
-          <div class='green-column' id="green-columns">
+      
+          <div class='' id="green-columns">
             <div id="logo-welcome" >
                 
             </div>
@@ -28,20 +28,30 @@ export const templateCreate = () => {
             </div>
             <div >
                 <button id="create" class="sign-in-style">Crear cuenta</button>
-            </div>    
+            </div>
+          
+    
    `;
 
     //pasar cel contenido al div
     containerCreate.innerHTML = contentCreate;
     //le pido que busque el id del botón dentro del div cerrado
     const btn = containerCreate.querySelector('#create');
+
     //evento del botón que llama a la autentificación de Google
     btn.addEventListener('click', () => {
-    let pass = containerCreate.querySelector('#pass').value;
-    let mail = containerCreate.querySelector('#mail').value;
 
-        createAccount(mail,pass);
+        let pass = containerCreate.querySelector('#pass').value;
+        let mail = containerCreate.querySelector('#mail').value;
+        let passRepeat = containerCreate.querySelector('#pass-repeat').value;
+        let result = verifyPass(pass, passRepeat)
+
+        if (result === true) {
+            createAccount(mail, pass);
+        } else {
+            alert("Las contraseñas no coinciden")
+        }
+
     })
     return containerCreate;
 }
-
