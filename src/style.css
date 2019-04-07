@@ -1,5 +1,5 @@
 input {
-  border:none;
+  border:10;
 }
 
 .some-page-wrapper {
@@ -110,6 +110,12 @@ input {
     background-repeat: no-repeat;
     margin-left: 60px;
 }
-#muro{
+#agregar{
   display: none;
+}
+#entrar{
+  display:block;
+}
+#page2{
+  display: block;
 }
