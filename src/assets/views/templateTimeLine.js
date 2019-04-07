@@ -1,6 +1,7 @@
 export const templateTimeLine = () =>{
-  var user = firebase.auth().currentUser;
-  var name, email, photoUrl, uid, emailVerified;
+  const user = firebase.auth().currentUser;
+  let name, email, photoUrl, uid, emailVerified;
+  console.log(user,name, email, photoUrl, uid, emailVerified)
 
 
   document.getElementById('root').innerHTML='';
@@ -31,6 +32,10 @@ export const templateTimeLine = () =>{
                         <div class='column'>
                           <div class='grid-one'>
                             Some Text in Column One
+                            <div class='row'>
+                            <a href="#/delete"><img class="delete" src='assets/Moodboard/delete.png'  alt="delete"></a>
+
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -54,13 +59,22 @@ export const templateTimeLine = () =>{
     ref.orderByChild("recipe").on("child_added", function(snapshot) {
         refTimeline.innerHTML += `<div class='row'>
                         <div class='column'>
-                          <div class='grid-one'>
-                            ${snapshot.val().recipe}
+                              <div class='grid-one'>
+                              ${snapshot.val().recipe}
+                                <div id='delete'>
+                                  <a href="#/delete"><img class="delete" src='assets/Moodboard/delete.png'  alt="Borrar"></a>
+                                 <a href="#/edit"><img class="edit" src='assets/Moodboard/edit.png'  alt="Editar"></a>
+                              </div>
+                            </div>
                           </div>
                         </div>
-                      </div>`;
-        console.log('recipes');
+                      </div>
+                      `
+                      ;
+                      
+        // console.log('recipes');
         console.log(snapshot.key + " was " + snapshot.val().recipe + " meters tall");
+        
     });
   
   return containerTimeLine;

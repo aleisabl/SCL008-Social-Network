@@ -7,7 +7,7 @@ export const templateProfile = () =>{
     let name, email, photoUrl, uid, emailVerified;
 
 
-    var storageRef = firebase.storage().ref(user.email + '/profilePicture/');
+    let storageRef = firebase.storage().ref(user.email + '/profilePicture/');
 
 
     document.getElementById('root').innerHTML='';
@@ -124,16 +124,16 @@ export const templateProfile = () =>{
 
     };
 
-    var refAvatar = firebase.storage().ref(user.email + '/profilePicture/' + user.email);
+    const refAvatar = firebase.storage().ref(user.email + '/profilePicture/' + user.email);
 
     refAvatar.getDownloadURL().then((url) => {
         // `url` is the download URL for 'images/stars.jpg'
 
         // This can be downloaded directly:
-        var xhr = new XMLHttpRequest();
+        const xhr = new XMLHttpRequest();
         xhr.responseType = 'blob';
         xhr.onload = function(event) {
-            var blob = xhr.response;
+            const blob = xhr.response;
         };
         xhr.open('GET', url);
         xhr.send();

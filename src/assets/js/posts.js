@@ -31,7 +31,7 @@ return post;
 
 
 export const showRecipeProfile = () => {
-var user = firebase.auth().currentUser;
+const user = firebase.auth().currentUser;
 
 
 firebase.database().ref('recipe/').orderByChild('user').equalTo(user.uid);
