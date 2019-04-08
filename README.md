@@ -86,3 +86,8 @@ Para planificar y coordinar el trabajo se utilizó Trello
 la cual se puede ver en siguiente link:
 
 https://trello.com/b/0UWGSXXH/proyecto-3-red-social
+
+### **Diseño, Moodboard**
+
+ ![imagen 5](src/assets/Moodboard/moodboard1.png)
+ ![imagen 6](src/assets/Moodboard/moodboard2.png)
