@@ -4,8 +4,6 @@ comprobar que el usuario ingresa la misma contraseña en ambos campos
 
 import { verifyPass } from './../src/assets/js/auth.js';
 
-import { verifyUser } from './../src/assets/js/auth.js'; 
-
 describe('verifyPass', () => {
 
     it('si las contraseñas coinciden, retorna true', () => {
@@ -17,16 +15,3 @@ describe('verifyPass', () => {
     });
 
 });
- 
-describe('verifyUser', () => {
-
-    it('', () => {
-        expect(verifyUser()).toBe(false);
-    });
-
-    it('', () => {
-        expect(verifyUser()).toBe(false);
-    });
-
-});
- 

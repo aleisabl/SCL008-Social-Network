@@ -53,14 +53,3 @@ export const verifyPass = (pass, passRepeat) => {
 		return false;
 	}
 } 
-	
- export const verifyUser = (firebaseUser) => {
-	if (firebaseUser) {
-		console.log('muestra timeline')
-		return true;
-	}
-	else{
-		console.log("Debes registrarte para poder ingresar");
-		return false;
-	}
-} 
