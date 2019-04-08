@@ -3,7 +3,8 @@ import { logOut } from './../js/auth.js';
 
 export const templateProfile = () =>{
   var user = firebase.auth().currentUser;
-  var name, email, photoUrl, uid, emailVerified;
+  var photoURL = user.photoURL;
+  var name = user.displayName;                                    
 
 
   document.getElementById('root').innerHTML='';
@@ -16,14 +17,14 @@ export const templateProfile = () =>{
                         <div class='row'>
                         <div class='column'>
                         <div class='avatar'>
-                        <img class="avatar" src='${user.photoURL}' alt="avatar">
+                        <img class="avatar" src='${photoURL}' alt="avatar" onerror="this.src='assets/Moodboard/girl.png'";>
                         <a href="#/login" onclick='alert(hola)' id="log-out">Cerrar Sesión </a>  
                         </div>
                         </div>
                         
                         <div class='column'>
                         <div class='user-name'>
-                        ${user.displayName}
+                        ${name}
                         <i class="fas fa-cog"></i>
                         </div>
                         <p>Biografía o descripción del perfil del usuario aquí</p>
