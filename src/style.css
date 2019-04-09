@@ -266,3 +266,6 @@ select.soflow{
    flex-direction: row;
    justify-content: flex-start;
 }
+p{
+  text-align: auto
+}

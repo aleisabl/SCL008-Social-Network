@@ -7,7 +7,7 @@ export const templateProfile = () =>{
   const info = showInfoUser();
 
   console.log(info);
-  let photo = info[0].photoUser;
+  // let photo = info[0].photoUser;
   let name = info[0].fullnameUser;
 
 

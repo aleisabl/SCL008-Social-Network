@@ -24,16 +24,20 @@ export  const templateNewRecipe = () =>{
                     </div>
                 </div>
                 <div class="create-recipe">
-                  <div class="cfield">
+                  <div class="title">
+                  <p2>Nombre de tu receta<p2><br><br>
                     <input type="text" id="titleRecipe" placeholder="Titulo de tu receta">
+                  </div><br><br>
+                  <p2>Ingredientes<p2>
+                  <div class="ingredients"><br>
+                  
+                     <textarea class="notes" cols="40" rows="5" placeholder="Ingredientes" id="ingredientes"></textarea>
                   </div>
-                  <div class="center">
-                     
-                     <textarea class="notes" cols="40" rows="5" placeholder="ingresa tu receta" id="description"></textarea>
-                  </div>
-        
-                    
-                    
+                   <p2>Preparación<p2> <br>
+                  <div class="preparation">
+                  
+                  <textarea class="notes" cols="40" rows="5" placeholder="Preparación" id="preparacion"></textarea>
+               </div>
                     <select id="tipe-recipe" class="soflow">
                         <option value="none">Mi receta es apta para :</option>
                         <option value="celiaco">Celíaco</option>
@@ -56,10 +60,11 @@ export  const templateNewRecipe = () =>{
 
     btnPostNewRecipe.addEventListener('click', () =>{
       const title = containerNewRecipe.querySelector('#titleRecipe').value;
-      const description = containerNewRecipe.querySelector('#description').value;
+      const ingredientes = containerNewRecipe.querySelector('#ingredientes').value;
+      const preparacion = containerNewRecipe.querySelector('#preparacion').value;
       const tipeRecipe = containerNewRecipe.querySelector('#tipe-recipe').value;
       const file = containerNewRecipe.querySelector('#file').files[0];
-
+console.log("click publicar")
       if (file) {
         const ref = firebase.storage().ref();
         const name = (+new Date())+'-'+ file.name;
@@ -67,7 +72,7 @@ export  const templateNewRecipe = () =>{
         const task = ref.child(name).put(file,metadata);
       }
    
-      postRecipe(title,description,tipeRecipe);
+      postRecipe(title,ingredientes,preparacion,tipeRecipe,file);
       
 
     })  

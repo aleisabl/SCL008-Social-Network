@@ -1,5 +1,5 @@
 
-export const postRecipe = (title,description,type) =>{
+export const postRecipe = (title,ingredientes,preparacion,type) =>{
 		var user = firebase.auth().currentUser;
 		
 
@@ -7,8 +7,10 @@ export const postRecipe = (title,description,type) =>{
 	  	user: user.uid, 
 	    username: user.displayName,
 	    titleRecipe : title,
-	    recipe : description,
-	    tipe: type,
+			ingredients : ingredientes,
+			preparation: preparacion,
+			tipe: type,
+			
 	});
 	
 	
