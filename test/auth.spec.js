@@ -24,4 +24,8 @@ describe('verifyEmail', () => {
         expect(verifyEmail('aleisabl.25@gmail.com')).toBe(true);
     });
 
+    it('si el correo no cumple con la regla, retorna false', () => {
+        expect(verifyEmail('aleisabl.25gmail.com')).toBe(false);
+    });
+
 }) 
