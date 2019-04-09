@@ -10,7 +10,6 @@ export const templateProfile = () =>{
   console.log(info);
   
   
-  
   document.getElementById('root').innerHTML='';
   const containerProfile = document.createElement('div');
   const contentProfile = `
@@ -22,13 +21,13 @@ export const templateProfile = () =>{
                         <div class='column'>
                         <div class='avatar'>
                         <img class="avatar" src='${foto}' alt="avatar">
+
                         <a href="#/login" onclick='alert(hola)' id="log-out">Cerrar Sesión </a>  
                         </div>
                         </div>
                         
                         <div class='column'>
-                        <div class='user-name'>
-                        ${nombre}
+                        <div class='user-name'>${nombre}
                         <i class="fas fa-cog"></i>
                         </div>
                         <p>Biografía o descripción del perfil del usuario aquí</p>
