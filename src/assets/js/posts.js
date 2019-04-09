@@ -25,21 +25,9 @@ export const showRecipeTimeLine = () =>{
 		 post.push(childData);
 		})
 	})
+ console.log(post);
  return post;
 };
 
 
 
-export const showRecipeProfile = () => {
-	var user = firebase.auth().currentUser;
-	
-
-	firebase.database().ref('recipe/').orderByChild('user').equalTo(user.uid);
-};
-//   firebase.database().ref('recipe/' + user.uid).set({
-	//   	user: user.uid, 
-	//     username: name,
-	//     titleRecipe : title,
-	//     recipe : description,
-	//     tipe: type,
-	// });
