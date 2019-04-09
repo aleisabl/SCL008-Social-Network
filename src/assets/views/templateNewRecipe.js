@@ -27,11 +27,11 @@ export  const templateNewRecipe = () =>{
                  <div class="create-recipe">
                   <div class="cfield">
                      
-                     <input type="text" id="titleRecipe" placeholder="Titulo de tu receta">
+                     <input type="text" id="titleRecipe" minlength="3" placeholder="Titulo de tu receta">
                   </div>
                   <div class="center">
                      
-                     <textarea class="notes" cols="40" rows="5" placeholder="ingresa tu receta" id="description"></textarea>
+                     <textarea class="notes" minlength="5" maxlength="100" cols="40" rows="5" placeholder="ingresa tu receta" id="description"></textarea>
                   </div>
         
                     
@@ -48,7 +48,7 @@ export  const templateNewRecipe = () =>{
                 </div>
                     <footer><a href="#/timeline"><img class="timeline" src='assets/Moodboard/home.png'  alt="home"></a>
                     <a href="#/likes"><img class="like" src='assets/Moodboard/like.png'  alt="like"></a>
-                    <a href="#/newrecipe"><img class="newRecipe" src='assets/Moodboard/add.png'  alt="newRecipe"></a>
+                    <a href="#/newrecipe"><img class="newRecipe" src='assets/Moodboard/add2.png'  alt="newRecipe"></a>
                     <a href="#/profile"><img class="user" src='assets/Moodboard/user.png'  alt="user"></a>
                     </footer>
     `;

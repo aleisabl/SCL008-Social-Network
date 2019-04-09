@@ -18,7 +18,7 @@ export const templateLogin = () => {
             </div>
             <div class="cfield">
                 <i class="fas fa-user-alt"></i>
-                <input type="email" id="correo"  placeholder="Correo" name="">
+                <input type="email" id="email-sign-in"  placeholder="Correo" name="">
             </div>
 
             <div class="cfield">
@@ -63,7 +63,7 @@ export const templateLogin = () => {
 
     btnLogin.addEventListener('click', () => {
         let passwordSign = containerLogin.querySelector('#password-sign-in').value;
-        let emailSign = containerLogin.querySelector('#correo').value;
+        let emailSign = containerLogin.querySelector('#email-sign-in').value;
 
         signIn(emailSign,passwordSign)
         containerLogin.innerHTML = '';

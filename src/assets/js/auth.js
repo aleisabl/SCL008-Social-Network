@@ -93,10 +93,16 @@ export const verifyPass = (pass, passRepeat) => {
 	}
 } 
 
-
-export const verifyEmail = (email) => {
+export const verifyMail = (mail) => {
     //expresión regular que simula el patrón del correo electrónico
     let pattern = /\S+@\S+\.\S+/;
-    return pattern.test(email);
+    return pattern.test(mail);
   }
 
+  export const verifyRecipe = (description) => {
+	if (description.length > 100) {
+		return false;
+	} else 
+		return true;
+	
+  }
