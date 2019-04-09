@@ -46,7 +46,7 @@ export  const templateNewRecipe = () =>{
                     <input id="file" type="file" name="file" accept="image/*">
                     <button id="postBtn">Publicar</button>
                 </div>
-                    <footer><a href="#/timeline"><img class="home" src='assets/Moodboard/home.png'  alt="home"></a>
+                    <footer><a href="#/timeline"><img class="timeline" src='assets/Moodboard/home.png'  alt="home"></a>
                     <a href="#/likes"><img class="like" src='assets/Moodboard/like.png'  alt="like"></a>
                     <a href="#/newrecipe"><img class="newRecipe" src='assets/Moodboard/add.png'  alt="newRecipe"></a>
                     <a href="#/profile"><img class="user" src='assets/Moodboard/user.png'  alt="user"></a>

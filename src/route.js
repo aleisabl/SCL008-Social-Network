@@ -89,9 +89,7 @@ const showTemplate = (hash) => {
                 return containerRoot.appendChild(templateProfile());
             }
             else{
-                alert("Debes registrarte para poder ver tu perfil");
                 return containerRoot.appendChild(templateLogin());
-
             }
         });
         break;
