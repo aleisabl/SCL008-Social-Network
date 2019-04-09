@@ -20,8 +20,7 @@ export const templateTimeLine = () =>{
                       </div>
                     </div>          
                         <section class="options">
-                            <i class="iconSearch fas fa-search search-icon"></i>
-                         <select class="soflow">
+                         <select class="soflow hola">
                             <option>Celíaco</option>
                             <option>Diabético</option>
                         </select>
