@@ -166,9 +166,9 @@ footer {
 
   #logo-welcome {
     background-image: url(assets/Moodboard/Logo.png);
-    margin-top: 0.1cm;
+    margin-top: 0.2cm;
     height: 200px;
-    background-size: contain;
+    background-size: 209px;
     background-repeat: no-repeat;
     margin-left: 70px;
 }
