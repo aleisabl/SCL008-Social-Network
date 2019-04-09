@@ -1,12 +1,15 @@
 import { logOut } from './../js/auth.js';
+import { showRecipeProfile, showInfoUser } from './../js/posts.js';
 
 
 export const templateProfile = () =>{
   var user = firebase.auth().currentUser;
-  var photoURL = user.photoURL;
-  var name = user.displayName;                                    
-
-
+  const info = showInfoUser();
+  let foto = info[0].photoUser;
+  let nombre = info[0].fullnameUser;
+  console.log(info);
+  
+  
   document.getElementById('root').innerHTML='';
   const containerProfile = document.createElement('div');
   const contentProfile = `
@@ -17,14 +20,14 @@ export const templateProfile = () =>{
                         <div class='row'>
                         <div class='column'>
                         <div class='avatar'>
-                        <img class="avatar" src='${photoURL}' alt="avatar" onerror="this.src='assets/Moodboard/girl.png'";>
-                        <a href="#/login" id="log-out">Cerrar Sesión </a>  
+                        <img class="avatar" src='${foto}' alt="avatar">
+
+                        <a href="#/login" onclick='alert(hola)' id="log-out">Cerrar Sesión </a>  
                         </div>
                         </div>
                         
                         <div class='column'>
-                        <div class='user-name'>
-                        ${name}
+                        <div class='user-name'>${nombre}
                         <i class="fas fa-cog"></i>
                         </div>
                         <p>Biografía o descripción del perfil del usuario aquí</p>
@@ -33,49 +36,9 @@ export const templateProfile = () =>{
                         </div>
                         </div>     
                         
-                        <div class=''>
-                      <div class='row'>
-                        <div class='column'>
-                          <div class='grid-one'>
-                            Some Text in Column One
-                          </div>
+                        <div class='grid' id="grid" >
+                      
                         </div>
-                        <div class='column'>
-                          <div class='grid-two'>
-                            Some Text in Column Two
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class=''>
-                      <div class='row'>
-                        <div class='column'>
-                          <div class='grid-one'>
-                            Some Text in Column One
-                          </div>
-                        </div>
-                        <div class='column'>
-                          <div class='grid-two'>
-                            Some Text in Column Two
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class='some-page-wrapper'>
-                      <div class='row'>
-                        <div class='column'>
-                          <div class='grid-one'>
-                            Some Text in Column One
-                          </div>
-                        </div>
-                        <div class='column'>
-                          <div class='grid-two'>
-                            Some Text in Column Two
-                          </div>
-                        </div>
-                      </div>
-                    </div>
                     <footer>
                     <a href="#/timeline"><img class="timeline" src='assets/Moodboard/home.png'  alt="timeline"></a>
                     <a href="#/likes"><img class="like" src='assets/Moodboard/like.png'  alt="like"></a>
@@ -88,6 +51,24 @@ export const templateProfile = () =>{
 
   containerProfile.innerHTML= contentProfile;
   const btnLogOut = containerProfile.querySelector('#log-out');
+
+  let posts = showRecipeProfile();
+  let text = '';
+  let containerPost = containerProfile.querySelector('#grid');
+  
+  posts.forEach(function(element){
+   
+    text += `             <div>
+                          <div  class='grid-one'>
+                            <p>${element.titleRecipe}</p>
+                            <p>${element.recipe}</p>
+                            <p>apto para:${element.tipe}</p>
+                            <p>Subido por ${element.username}</p>
+                          </div> 
+                          </div>`;
+
+  });
+  containerPost.innerHTML= text;
   
   btnLogOut.addEventListener('click', () =>{
     logOut();
