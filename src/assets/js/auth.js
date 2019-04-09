@@ -89,7 +89,7 @@ export const verifyPass = (pass, passRepeat) => {
 
 
 export const verifyEmail = (email) => {
-    /*expresión regular que simula el patron de búsqueda del correo electrónico*/
+    //expresión regular que simula el patrón del correo electrónico
     let pattern = /\S+@\S+\.\S+/;
     return pattern.test(email);
   }
