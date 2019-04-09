@@ -46,12 +46,12 @@ const showTemplate = (hash) => {
         case 'login': 
             firebase.auth().onAuthStateChanged(firebaseUser => {
                 if (firebaseUser) {
-                    console.log(firebaseUser);
-                    console.log("estoy en el metodo login");
+                    
+                   
                     return containerRoot.appendChild(templateTimeLine());
                 }
                 else{
-                    console.log("Debes registrarte para poder ingresar");
+                    
                    return containerRoot.appendChild(templateLogin()); 
                 }
                 });
@@ -60,11 +60,11 @@ const showTemplate = (hash) => {
         case 'create':
             firebase.auth().onAuthStateChanged(firebaseUser => {
                 if (firebaseUser) {
-                    console.log(firebaseUser);
+                    
                     return containerRoot.appendChild(templateTimeLine());
                 }
                 else{
-                    console.log("Debes registrarte para poder ingresar");
+                    
                     /*containerRoot.innerHTML= templateCreate();*/
                      return containerRoot.appendChild(templateCreate());
                 }
@@ -73,11 +73,11 @@ const showTemplate = (hash) => {
         case 'timeline':
             firebase.auth().onAuthStateChanged(firebaseUser => {
                 if (firebaseUser) {
-                    console.log(firebaseUser);
+                    
                     return containerRoot.appendChild(templateTimeLine());
                 }
                 else{
-                    alert("Debes registrarte para poder ingresar");
+                    
                     return containerRoot.appendChild(templateLogin());
 
                 }
@@ -96,7 +96,7 @@ const showTemplate = (hash) => {
         case 'newrecipe':
             firebase.auth().onAuthStateChanged(firebaseUser => {
                 if (firebaseUser) {
-                    console.log(firebaseUser);
+                    
                     return containerRoot.appendChild(templateNewRecipe());
                 }
                 else{
@@ -107,7 +107,7 @@ const showTemplate = (hash) => {
         });
         break;
         case '' :
-            console.log("salí");
+           
             containerRoot.appendChild(templateLogin());
         break;
         default: 
@@ -124,11 +124,11 @@ const showTemplate = (hash) => {
      firebase.auth().onAuthStateChanged(firebaseUser => {
         const containerRoot = document.getElementById('root');
                 if (firebaseUser) {
-                    console.log(firebaseUser);
+                    
                     return containerRoot.appendChild(templateTimeLine());
                 }
                 else{
-                    console.log("Debes registrarte para poder ingresar");
+                   
                     containerRoot.appendChild(templateLogin());
                 }
      })
