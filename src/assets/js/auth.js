@@ -21,7 +21,7 @@ export const loginGoogle = () => {
 	return 'login con Google OK';
 }
 
-export const createAccount = (email, password) => {
+export const createAccount = (email, password, nombreyapellido) => {
 	firebase.auth().createUserWithEmailAndPassword(email, password).catch(function (error) {
 		// Handle Errors here.
 		var errorCode = error.code;
@@ -29,6 +29,18 @@ export const createAccount = (email, password) => {
 		alert(errorMessage);
 		// ...
 	});
+	firebase.auth().onAuthStateChanged(user => {
+                if (user) {
+                	console.log(user)
+                firebase.database().ref('userInfo/'+ user.uid).set({
+	  	 
+	    		username: nombreyapellido,
+				});
+                }
+                else{
+                }
+              });
+	
 	return 'cuenta creada OK';
 }
 
