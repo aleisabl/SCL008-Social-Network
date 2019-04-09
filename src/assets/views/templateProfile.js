@@ -5,7 +5,7 @@ import { logOut } from './../js/auth.js';
 export const templateProfile = () =>{
     const user = firebase.auth().currentUser;
     let name, email, photoUrl, uid, emailVerified;
-
+    console.log(name, email, photoUrl, uid, emailVerified)
 
     let storageRef = firebase.storage().ref(user.email + '/profilePicture/');
 

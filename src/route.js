@@ -34,6 +34,16 @@ const showTemplate = (hash) => {
     const containerRoot = document.getElementById('root');
     containerRoot.innerHTML = '';
     
+    const deletingRecipe = (route) => {
+        const deleteRecipe = firebase.database().ref('recipe/').child('recipe').user.uid;
+        let mensaje = confirm ("desea eliminar este mensaje");
+        if (mensaje === true){
+          firebase.database().ref("recipe/"+user.uid).remove();
+          location.reload();
+        }else{
+          return null;
+        }
+     }
     //hacemos el match del hash utilizado y el template que quiero msotrar
 
     switch (router) {
@@ -128,6 +138,7 @@ const showTemplate = (hash) => {
                     containerRoot.appendChild(templateLogin());
                 }
      })
+     
      
      //reconoce un cambio en el hash y le pasa ese nuevo hash a changeRouter
 

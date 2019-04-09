@@ -30,3 +30,17 @@ describe('verifyUser', () => {
 
 });
  
+import { verifImage } from './../src/assets/views/templateProfile'; 
+
+describe('verifImage', () => {
+
+    it('si la imagen carga correctamente, return true', () => {
+        expect(verifImage()).toBe(true);
+    });
+
+    it('si la imagen no carga correctamente, return false', () => {
+        expect(verifImage()).toEqual(false);
+    });
+
+});
+ 
