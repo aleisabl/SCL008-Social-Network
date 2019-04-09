@@ -2,7 +2,7 @@
 comprobar que el usuario ingresa la misma contraseña en ambos campos
  */
 
-import { verifyPass, verifyEmail } from './../src/assets/js/auth.js';
+import { verifyPass, verifyMail, verifyRecipe } from './../src/assets/js/auth.js';
 
 describe('verifyPass', () => {
 
@@ -18,14 +18,26 @@ describe('verifyPass', () => {
 
 /*Función que valida que el usuario debe ingresar un @ cuando ingresa un correo*/
 
-describe('verifyEmail', () => {
+describe('verifyMail', () => {
 
     it('si el correo cumple con la regla, retorna true', () => {
-        expect(verifyEmail('aleisabl.25@gmail.com')).toBe(true);
+        expect(verifyMail('aleisabl.25@gmail.com')).toBe(true);
     });
 
     it('si el correo no cumple con la regla, retorna false', () => {
-        expect(verifyEmail('aleisabl.25gmail.com')).toBe(false);
+        expect(verifyMail('aleisabl.25gmail.com')).toBe(false);
+    });
+
+}) 
+
+describe('verifyRecipe', () => {
+
+    it('si la receta.length es mayor a 100, retorna false', () => {
+        expect(verifyRecipe('nnnnnnnnnnnnnnnnnnnnhola esto es para ver si funciona el testnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn')).toBe(false);
+    });
+
+    it('si la receta.length es menor a 100, retorna true', () => {
+        expect(verifyRecipe('')).toBe(true);
     });
 
 }) 
