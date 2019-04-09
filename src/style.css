@@ -38,6 +38,11 @@ body {
   padding: 10px;
 }
 
+.grid{
+  padding-bottom: 100px;
+  height: 900px;
+}
+
 .grid-two {
 
   box-shadow: 0 0 15px rgba(0,0,0,.5);
@@ -260,8 +265,4 @@ select.soflow{
    display: flex;
    flex-direction: row;
    justify-content: flex-start;
-}
-
-.hola {
-  margin-left: 100px;
 }
