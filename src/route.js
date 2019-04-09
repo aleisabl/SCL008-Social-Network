@@ -122,7 +122,9 @@ const showTemplate = (hash) => {
  export const initRouter = () => {
      window.addEventListener('load', changeRouter(window.location.hash));
 
+
   }
+
   
 
      
