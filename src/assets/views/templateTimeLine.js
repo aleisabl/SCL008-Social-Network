@@ -1,9 +1,8 @@
 
+import { showRecipeTimeLine } from './../js/posts.js';
+
 export const templateTimeLine = () =>{
-  var user = firebase.auth().currentUser;
-  var name, email, photoUrl, uid, emailVerified;
-
-
+  
   document.getElementById('root').innerHTML='';
   const containerTimeLine = document.createElement('div');
   const contentTimeLine = `
@@ -21,56 +20,18 @@ export const templateTimeLine = () =>{
                       </div>
                     </div>          
                         <section class="options">
-                            <i class="fas fa-search search-icon"></i>
-                         <select>
+                            <i class="iconSearch fas fa-search search-icon"></i>
+                         <select class="soflow">
                             <option>Celíaco</option>
                             <option>Diabético</option>
                         </select>
                     </section>
 
-                    <div class=''>
-                      <div class='row'>
-                        <div class='column'>
-                          <div class='grid-one'>
-                            Some Text in Column One
-                          </div>
-                        </div>
-                        <div class='column'>
-                          <div class='grid-two'>
-                            Some Text in Column Two
-                          </div>
-                        </div>
-                      </div>
+                    <div class=''id="grid" >
+                      
                     </div>
 
-                    <div class=''>
-                      <div class='row'>
-                        <div class='column'>
-                          <div class='grid-one'>
-                            Some Text in Column One
-                          </div>
-                        </div>
-                        <div class='column'>
-                          <div class='grid-two'>
-                            Some Text in Column Two
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class=''>
-                      <div class='row'>
-                        <div class='column'>
-                          <div class='grid-one'>
-                            Some Text in Column One
-                          </div>
-                        </div>
-                        <div class='column'>
-                          <div class='grid-two'>
-                            Some Text in Column Two
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                   
                     <footer>
                     <a href="#/timeline"><img class="timeline" src='assets/Moodboard/home.png'  alt="timeline"></a>
                     <a href="#/likes"><img class="like" src='assets/Moodboard/like.png'  alt="like"></a>
@@ -81,6 +42,23 @@ export const templateTimeLine = () =>{
           
 
   containerTimeLine.innerHTML= contentTimeLine;
+
+  let posts = showRecipeTimeLine();
+  let text = '';
+  let containerPost = containerTimeLine.querySelector('#grid');
+  
+  posts.forEach(function(element){
+   
+    text += `
+                          <div  class='grid-one'>
+                            <p>${element.titleRecipe}</p>
+                            <p>${element.recipe.substring(0,100)}</p>
+                            <p>apto para:${element.tipe}</p>
+                           
+                          </div>`;
+
+  });
+  containerPost.innerHTML= text;
   
   return containerTimeLine;
   
