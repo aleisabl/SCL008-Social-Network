@@ -43,7 +43,7 @@ export  const templateNewRecipe = () =>{
                         <option value="Intolerante a la lactosa">Intolerante a la lactosa</option>
                         <option value="Vegano">Vegano</option>
                     </select>
-                    <input id="file" type="file" name="file" accept="image/*">
+                    <input id="file" type="file" name="pic" accept="image/*">
                     <button id="postBtn">Publicar</button>
                 </div>
                     <footer><a href="#/timeline"><img class="timeline" src='assets/Moodboard/home.png'  alt="home"></a>
@@ -60,18 +60,15 @@ export  const templateNewRecipe = () =>{
       const title = containerNewRecipe.querySelector('#titleRecipe').value;
       const description = containerNewRecipe.querySelector('#description').value;
       const tipeRecipe = containerNewRecipe.querySelector('#tipe-recipe').value;
+      const file = containerNewRecipe.querySelector('#file').files[0];
 
-
-      
-      const ref = firebase.storage().ref();
-      const fileUpload = containerNewRecipe.querySelector('#file').files[0];
-      const name = fileUpload.name;
-      const metadata = { contentType: file.type };
-      const task = ref.child(name).put(file,metadata);
-
-
-      
-
+      if (file) {
+        const ref = firebase.storage().ref();
+        const name = (+new Date())+'-'+ file.name;
+        const metadata = { contentType: file.type };
+        const task = ref.child(name).put(file,metadata);
+      }
+   
       postRecipe(title,description,tipeRecipe);
       
 
