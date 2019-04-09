@@ -11,7 +11,7 @@ export const templateCreate = () => {
             </div>
             <div class="cfield">
                 <i class="fas fa-user-alt"></i>
-                <input type="text" id="fullname" placeholder="Nombre y apellido" name="">
+                <input type="text" id="full-name" placeholder="Nombre y apellido" name="">
             </div>
             
             <div class="cfield">
@@ -45,7 +45,7 @@ export const templateCreate = () => {
         let mail = containerCreate.querySelector('#mail').value;
         let passRepeat = containerCreate.querySelector('#pass-repeat').value;
         let result = verifyPass(pass, passRepeat)
-        let fullName = containerCreate.querySelector('#fullname').value;
+        let fullName = containerCreate.querySelector('#full-name').value;
 
         
 

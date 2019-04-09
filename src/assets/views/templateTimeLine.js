@@ -34,7 +34,7 @@ export const templateTimeLine = () =>{
                     <footer>
                     <a href="#/timeline"><img class="timeline" src='assets/Moodboard/home.png'  alt="timeline"></a>
                     <a href="#/likes"><img class="like" src='assets/Moodboard/like.png'  alt="like"></a>
-                    <a href="#/newrecipe"><img class="newRecipe" src='assets/Moodboard/add.png'  alt="newRecipe"></a>
+                    <a href="#/newrecipe"><img class="newRecipe" src='assets/Moodboard/add2.png'  alt="newRecipe"></a>
                     <a href="#/profile"><img class="user" src='assets/Moodboard/user.png'  alt="user"></a>
                     </footer>`;
                     
