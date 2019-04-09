@@ -18,7 +18,7 @@ export const templateProfile = () =>{
                         <div class='column'>
                         <div class='avatar'>
                         <img class="avatar" src='${photoURL}' alt="avatar" onerror="this.src='assets/Moodboard/girl.png'";>
-                        <a href="#/login" onclick='alert(hola)' id="log-out">Cerrar Sesión </a>  
+                        <a href="#/login" id="log-out">Cerrar Sesión </a>  
                         </div>
                         </div>
                         
