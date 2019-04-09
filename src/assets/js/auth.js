@@ -30,16 +30,25 @@ export const createAccount = (email, password, nombreyapellido) => {
 		// ...
 	});
 	firebase.auth().onAuthStateChanged(user => {
-                if (user) {
-                	console.log(user)
-                firebase.database().ref('userInfo/'+ user.uid).set({
-	  	 
-	    		username: nombreyapellido,
-				});
-                }
-                else{
-                }
-              });
+        if (user.displayName == null && user.photoURL == null) {
+	        console.log(user)
+	        firebase.database().ref('userInfo/'+ user.uid).set({
+		 
+			fullnameUser: nombreyapellido,
+			photoUser: "http://www.xeus.com/wp-content/uploads/2014/09/One_User_Orange.png"
+
+			
+			});
+        }
+        else{
+        	firebase.database().ref('userInfo/'+ user.uid).set({
+	 
+			fullnameUser: user.displayName,
+			photoUser : user.photoURL
+			
+			});	
+        }
+      });
 	
 	return 'cuenta creada OK';
 }
