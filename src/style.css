@@ -92,16 +92,26 @@ footer {
 }
 
 .sign-in-style {
-  width: 250px;
-  border: none;
+  width: 270px;
+}
+
+.sign-in-google, .sign-in-style {
+  background-color:  #FD7F31;
   border-radius: 5px;
-  padding: 1%;
-  background-color: #FD7F31;
-  margin-top: 0%;
-  margin-left: 35px;
   color: white;
-  cursor: pointer;
   font-size: 25px;
+  padding:1%;
+  margin-left: 35px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 15%;
+}
+
+.sign-in-google {
+  width: 250px;
+  padding-left: 18%;
+  padding-right: 20%;
 }
 
 #postBtn{
@@ -115,19 +125,6 @@ footer {
   color: white;
   cursor: pointer;
   font-size: 25px;
-}
-
-.sign-in-google {
-  background-color:  #FD7F31;
-  border-radius: 5px;
-  color: white;
-  font-size: 25px;
-  padding:1%;
-  width: 200px !important;
-  margin-left: 35px;
-  text-decoration: none;
-  padding-left: 18%;
-  padding-right: 20%;
 }
 
 .cfield {
@@ -182,7 +179,7 @@ footer {
 }
 
 .timeline, .like, .newRecipe, .user, .home {
-  margin: 24px;
+  margin: 20px;
   width: 40px;
 }
 
@@ -203,7 +200,6 @@ display: -webkit-box;
   background-repeat: no-repeat;
   height: 100px;
   background-position: right;
-
 }
 
 .create-recipe{
