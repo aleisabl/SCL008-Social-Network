@@ -27,7 +27,7 @@ export const templateTimeLine = () =>{
                         </select>
                     </section>
 
-                    <div class=''id="grid" >
+                    <div class='grid' id="grid" >
                       
                     </div>
 
@@ -49,12 +49,13 @@ export const templateTimeLine = () =>{
   
   posts.forEach(function(element){
    
-    text += `
+    text += `             <div>
                           <div  class='grid-one'>
                             <p>${element.titleRecipe}</p>
-                            <p>${element.recipe.substring(0,100)}</p>
+                            <p>${element.recipe}</p>
                             <p>apto para:${element.tipe}</p>
-                           
+                            <p>Subido por ${element.username}</p>
+                          </div> 
                           </div>`;
 
   });
