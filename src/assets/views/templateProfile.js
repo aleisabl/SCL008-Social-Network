@@ -5,6 +5,7 @@ import { showRecipeProfile, showInfoUser } from './../js/posts.js';
 export const templateProfile = () =>{
   var user = firebase.auth().currentUser;
   const info = showInfoUser();
+  console.log(info);
   let foto = info[0].photoUser;
   let nombre = info[0].fullnameUser;
   console.log(info);
@@ -22,7 +23,7 @@ export const templateProfile = () =>{
                         <div class='avatar'>
                         <img class="avatar" src='${foto}' alt="avatar">
 
-                        <a href="#/login" onclick='alert(hola)' id="log-out">Cerrar Sesión </a>  
+                        <a href="#/login"  id="log-out">Cerrar Sesión </a>  
                         </div>
                         </div>
                         
