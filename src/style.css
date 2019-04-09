@@ -65,12 +65,12 @@ body {
 }
 
 .options {
-  background-color:  #FD7F31;
+  background-color:  #7CBF9C;
   padding-left: 3%;
 }
 
 footer {
-  background-color:  #FD7F31;
+  background-color:  #7CBF9C;
   padding-left: 4%;
   bottom: 0;
   position: fixed;
@@ -96,7 +96,7 @@ footer {
 }
 
 .sign-in-google, .sign-in-style {
-  background-color:  #FD7F31;
+  background-color:  #7CBF9C;
   border-radius: 5px;
   color: white;
   font-size: 25px;
@@ -105,7 +105,7 @@ footer {
   text-decoration: none;
   border: none;
   cursor: pointer;
-  margin-top: 15%;
+  margin-top: 12%;
 }
 
 .sign-in-google {
@@ -119,7 +119,7 @@ footer {
   border: none;
   border-radius: 5px;
   padding: 1%;
-  background-color: #FD7F31;
+  background-color: #7CBF9C;
   margin-top: 2%;
   margin-left: 20px;
   color: white;
@@ -135,6 +135,7 @@ footer {
     margin-bottom: 19px;
     border-bottom: 1px solid black;
     padding-top: 5%;
+    margin-top: 5%;
   }
 
   #forgot-container {
@@ -165,10 +166,11 @@ footer {
 
   #logo-welcome {
     background-image: url(assets/Moodboard/Logo.png);
+    margin-top: 0.1cm;
     height: 200px;
     background-size: contain;
     background-repeat: no-repeat;
-    margin-left: 60px;
+    margin-left: 70px;
 }
 
 .logo {
