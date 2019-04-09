@@ -1,9 +1,8 @@
+
+import { showRecipeTimeLine } from './../js/posts.js';
+
 export const templateTimeLine = () =>{
-  const user = firebase.auth().currentUser;
-  let name, email, photoUrl, uid, emailVerified;
-  console.log(user,name, email, photoUrl, uid, emailVerified)
-
-
+  
   document.getElementById('root').innerHTML='';
   const containerTimeLine = document.createElement('div');
   const contentTimeLine = `
@@ -21,25 +20,16 @@ export const templateTimeLine = () =>{
                       </div>
                     </div>          
                         <section class="options">
-                            <i class="fas fa-search search-icon"></i>
-                         <select>
+                         <select class="soflow hola">
                             <option>Celíaco</option>
                             <option>Diabético</option>
                         </select>
                     </section>
-                    <div id="timeline">
-                      <div class='row'>
-                        <div class='column'>
-                          <div class='grid-one'>
-                            Some Text in Column One
-                            <div class='row'>
-                            <a href="#/delete"><img class="delete" src='assets/Moodboard/delete.png'  alt="delete"></a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+
+                    <div class='grid' id="grid" >
+                      
                     </div>
-                    
+
                    
                     <footer>
                     <a href="#/timeline"><img class="timeline" src='assets/Moodboard/home.png'  alt="timeline"></a>
@@ -52,29 +42,23 @@ export const templateTimeLine = () =>{
 
   containerTimeLine.innerHTML= contentTimeLine;
 
-    const db = firebase.database();
-    const ref = db.ref("recipe");
-    const refTimeline = containerTimeLine.querySelector('#timeline');
-    ref.orderByChild("recipe").on("child_added", function(snapshot) {
-        refTimeline.innerHTML += `<div class='row'>
-                        <div class='column'>
-                            <div class='grid-one'>
-                              ${snapshot.val().recipe}
-                                <div id='delete'>
-                                  <a href="#/delete"><img class="delete" src='assets/Moodboard/delete.png'  alt="Borrar"></a>
-                                  <a href="#/edit"><img class="edit" src='assets/Moodboard/edit.png'  alt="Editar"></a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      `
-                      ;
-                      
-        // console.log('recipes');
-        console.log(snapshot.key  + snapshot.val().recipe);
-        
-    });
+  let posts = showRecipeTimeLine();
+  let text = '';
+  let containerPost = containerTimeLine.querySelector('#grid');
+  
+  posts.forEach(function(element){
+   
+    text += `             <div>
+                          <div  class='grid-one'>
+                            <p>${element.titleRecipe}</p>
+                            <p>${element.recipe}</p>
+                            <p>apto para:${element.tipe}</p>
+                            <p>Subido por ${element.username}</p>
+                          </div> 
+                          </div>`;
+
+  });
+  containerPost.innerHTML= text;
   
   return containerTimeLine;
   
