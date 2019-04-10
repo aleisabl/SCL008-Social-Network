@@ -1,7 +1,12 @@
 
-import { showRecipeTimeLine } from './../js/posts.js';
+import { showRecipeTimeLine, showInfoUser } from './../js/posts.js';
+
 
 export const templateTimeLine = () =>{
+  let user = firebase.auth().currentUser;
+  const info = showInfoUser();
+
+  console.log(info);
   
   document.getElementById('root').innerHTML='';
   const containerTimeLine = document.createElement('div');
@@ -26,7 +31,7 @@ export const templateTimeLine = () =>{
                         </select>
                     </section>
 
-                    <div class='grid' id="grid" >
+                    <div class='grid' id="grid" onclick="window.location.href='#/recipe'" >
                       
                     </div>
 

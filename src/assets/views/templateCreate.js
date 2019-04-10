@@ -16,7 +16,7 @@ export const templateCreate = () => {
             
             <div class="cfield">
                 <i class="fas fa-user-alt"></i>
-                <input id="mail" type="email"  placeholder="Correo" name="">
+                <input id="email" type="email"  placeholder="Correo" name="">
             </div>
             <div class="cfield">
                 <i class="fas fa-key"></i>
@@ -42,7 +42,7 @@ export const templateCreate = () => {
     btn.addEventListener('click', () => {
 
         let pass = containerCreate.querySelector('#pass').value;
-        let mail = containerCreate.querySelector('#mail').value;
+        let email = containerCreate.querySelector('#email').value;
         let passRepeat = containerCreate.querySelector('#pass-repeat').value;
         let result = verifyPass(pass, passRepeat)
         let fullName = containerCreate.querySelector('#full-name').value;
@@ -50,7 +50,7 @@ export const templateCreate = () => {
         
 
         if (result === true) {
-            createAccount(mail, pass, fullName);
+            createAccount(email, pass, fullName);
         } else {
             alert("Las contraseñas no coinciden")
         }
