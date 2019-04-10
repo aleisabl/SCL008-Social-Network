@@ -246,7 +246,8 @@
       display: -webkit-box;
     }
   
-    .more-info{
+
+   .more-info{
       background-image: url('assets/Moodboard/more-info.png');
       background-size: 30px 30px;
       background-repeat: no-repeat;
@@ -269,3 +270,4 @@
       cursor: pointer;
       font-size: 25px;
     }
+
