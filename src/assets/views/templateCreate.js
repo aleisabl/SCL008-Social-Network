@@ -48,6 +48,9 @@ export const templateCreate = () => {
         let fullName = containerCreate.querySelector('#full-name').value;
         let resultFullName = verifyFullName(fullName);
 
+
+
+
         if (result === false) {
             alert ('Las contraseñas no coinciden')
         } else if (resultFullName === false) {
