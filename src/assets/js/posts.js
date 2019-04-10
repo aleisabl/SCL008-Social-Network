@@ -1,4 +1,3 @@
-
 export const postRecipe = (title,description,type) =>{
 		var user = firebase.auth().currentUser;
 		
@@ -10,12 +9,7 @@ export const postRecipe = (title,description,type) =>{
 	    recipe : description,
 	    tipe: type,
 	});
-	
-	
-	
 };
-
-
 
 export const showRecipeTimeLine = () =>{
 let post = []; 
@@ -28,8 +22,6 @@ let post = [];
  
  return post;
 };
-
-
 
 export const showRecipeProfile = () => {
 

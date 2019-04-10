@@ -2,7 +2,19 @@
 comprobar que el usuario ingresa la misma contraseña en ambos campos
  */
 
-import { verifyPass, verifyMail, verifyRecipe } from './../src/assets/js/auth.js';
+import { verifyFullName, verifyPass, verifyEmail, verifyRecipe } from './../src/assets/js/auth.js';
+
+describe('verifyFullName', () => {
+
+    it('si no ha ingresado su nombre y apellido, retorna false y un alert que debe ingresar sus datos', () => {
+        expect(verifyFullName('')).toBe(false);
+    });
+
+    it('si ha ingresado su nombre y apellido, retorna true', () => {
+        expect(verifyRecipe('fulanita pepito')).toBe(true);
+    });
+
+}) 
 
 describe('verifyPass', () => {
 
@@ -18,14 +30,14 @@ describe('verifyPass', () => {
 
 /*Función que valida que el usuario debe ingresar un @ cuando ingresa un correo*/
 
-describe('verifyMail', () => {
+describe('verifyEmail', () => {
 
     it('si el correo cumple con la regla, retorna true', () => {
-        expect(verifyMail('aleisabl.25@gmail.com')).toBe(true);
+        expect(verifyEmail('aleisabl.25@gmail.com')).toBe(true);
     });
 
     it('si el correo no cumple con la regla, retorna false', () => {
-        expect(verifyMail('aleisabl.25gmail.com')).toBe(false);
+        expect(verifyEmail('aleisabl.25gmail.com')).toBe(false);
     });
 
 }) 
@@ -41,3 +53,4 @@ describe('verifyRecipe', () => {
     });
 
 }) 
+
