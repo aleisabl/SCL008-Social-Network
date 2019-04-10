@@ -26,6 +26,7 @@ export const loginGoogle = () => {
 }
 
 export const createAccount = (email, password, nombreyapellido) => {
+	 let user = firebase.auth().currentUser;
 	firebase.auth().createUserWithEmailAndPassword(email, password).catch(function (error) {
 		// Handle Errors here.
 		var errorCode = error.code;

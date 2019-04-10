@@ -36,6 +36,12 @@ body {
   margin: 5px;
   float: left;
   padding: 10px;
+  cursor: pointer;
+}
+
+.grid-one:hover{
+  box-shadow: 0 0 15px rgba(0,0,0,.5);
+  transform: scale(1.02);
 }
 
 .grid{
@@ -182,7 +188,7 @@ footer {
 }
 
 .timeline, .like, .newRecipe, .user, .home {
-  margin: 24px;
+  margin: 20px;
   width: 40px;
 }
 
@@ -265,4 +271,18 @@ select.soflow{
    display: flex;
    flex-direction: row;
    justify-content: flex-start;
+}
+.image-recipe{
+  width: 380px;
+  border-radius: 10px;
+}
+
+.title-recipe{
+  width: -webkit-fill-available
+}
+
+.description-recipe{
+  background-color: #e7e7e7;
+  padding: 3%;
+  margin: 10px;
 }
