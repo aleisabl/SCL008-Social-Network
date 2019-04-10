@@ -1,288 +1,273 @@
-input {
-  border:none;
-}
+/*     styles generales de todo el código
+    fuentes, margenes, columnas, grillas, etc */
 
-html {
-  font-family: 'Open Sans Condensed', sans-serif;
-}
+    input {
+      border:none;
+    }
 
-body {
-  margin:0;
-}
+    html {
+      font-family: 'Open Sans Condensed', sans-serif;
+    }
 
-.some-page-wrapper {
-  margin: 15px;
-}
+    body {
+      margin:0;
+    }
 
-.row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding: 3%;
-}
+    .some-page-wrapper {
+      margin: 15px;
+    }
 
-.column {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 100%;
-  flex: 1;
-}
+    .row {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding: 3%;
+    }
 
-.grid-one {
+    .column {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 100%;
+      flex: 1;
+    }
+
+    .grid-one {
+      box-shadow: 0 0 15px rgba(0,0,0,.5);
+      width: 140px;
+      height: 200px;
+      margin: 5px;
+      float: left;
+      padding: 10px;
+    }
+
+    .grid{
+      padding-bottom: 100px;
+      height: 900px;
+    }
+
+    .grid-two {
+      box-shadow: 0 0 15px rgba(0,0,0,.5);
+      height: 100px;
+      margin: 5px;
+    }
+
+    .grid-title {
+      font-size: 40px;
+      font-weight: bold;
+      margin-top:18px;
+    }
+
+    .grid-title-create {
+      width: 200px;
+      margin-left: 20px;
+      font-size: 40px;
+      font-weight: bold;
+      margin-top:18px;
+    }
+
+    .options, footer, .sign-in-google, .sign-in-style, #postBtn  {
+      background-color:  rgba(149, 207, 116, 0.884);
+    }
+
+/*  styles del inicio de sesión y el registro */
+
+    #logo-welcome {
+      background-image: url(assets/Moodboard/Logo.png);
+      margin-top: 0.2cm;
+      height: 200px;
+      background-size: 209px;
+      background-repeat: no-repeat;
+      margin-left: 70px;
+    }
+
+    .sign-in-style {
+      width: 270px;
+    }
+
+    .sign-in-google, .sign-in-style {
+      border-radius: 5px;
+      color: white;
+      font-size: 25px;
+      padding:1%;
+      margin-left: 35px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      margin-top: 12%;
+    }
+
+    .sign-in-google {
+      width: 250px;
+      padding-left: 18%;
+      padding-right: 20%;
+    }
+
+    #forgot-container {
+      margin-left: 100px; 
+      padding-top: 5%;
+    }
+
+    #forgot-container, #register {
+      padding-bottom: 5%;
+      color: gray;
+    }
+
+    #register {
+      margin-left: 60px; 
+      padding-top: 2%;
+    }
+
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      font-size: 18px;
+    }
+
+    input {
+      width: 250px;
+      height: 30px;
+    }
+
+    input:focus {
+      outline: none !important;
+    }
+
+/*  muro */
+
+    .logo {
+      background-image: url(assets/Moodboard/LogoSin.png);
+      background-size: 90px 90px;
+      height: 85px;
+      background-repeat: no-repeat;
+    }
+
+    .options {
+      padding-left: 3%;
+    }
+
+    footer {
+      padding-left: 4%;
+      bottom: 0;
+      position: fixed;
+      width: -webkit-fill-available;
+      background-color:  rgba(149, 207, 116, 0.884);
+    }
+
+    .blue-column {
+      height: 400px;
+      background-size: cover;
+    }
+
+    .green-column {
+      background-color: white;
+      height: 600px;
+      text-align: left;
+      box-shadow: 0 0 15px rgba(0,0,0,.5);
+      opacity: 0.95;
+    }
+
+    .cfield {
+      float: left;
+      width: 80%;
+      position: relative;
+      margin-left: 30px;
+      margin-bottom: 19px;
+      border-bottom: 1px solid black;
+      padding-top: 5%;
+      margin-top: 5%;
+    }
+
+/*   iconos de navegación del footer */
+
+    .timeline, .like, .newRecipe, .user, .home {
+      margin: 20px;
+      width: 40px;
+    }
+
+    .notes {
+      background-image: -webkit-linear-gradient(white, white 30px, #ccc 30px, #ccc 31px, white 31px);
+      background-image: -moz-linear-gradient(white, white 30px, #ccc 30px, #ccc 31px, white 31px);
+      background-image: -ms-linear-gradient(white, white 30px, #ccc 30px, #ccc 31px, white 31px);
+      background-image: -o-linear-gradient(white, white 30px, #ccc 30px, #ccc 31px, white 31px);
+      background-image: linear-gradient(white, white 30px, #ccc 30px, #ccc 31px, white 31px);
+      background-size: 100% 31px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+      line-height: 31px;
+      padding: 8px;
+    }
+
+    textarea {
+      margin-left: 20px;
+    }
+
+    .centrar {
+      text-align: center;
+    }
+
+    select.soflow {
+      -webkit-appearance: button;
+      -webkit-border-radius: 2px;
+      -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+      -webkit-padding-end: 20px;
+      -webkit-padding-start: 2px;
+      -webkit-user-select: none;
+      background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
+      background-position: 94% center;
+      background-repeat: no-repeat;
+      border: 1px solid #AAA;
+      color: #555;
+      font-size: inherit;
+      margin: 10px;
+      overflow: hidden;
+      padding: 5px 10px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: 300px;
+    }
+
+/*  perfil */
+
+    .user-name {
+      font-size: 30px;
+      font-weight: bold;
+      margin-top: 2px;
+    }
+
+    .avatar {
+      margin: 5px;
+      width: 100px;
+      border-radius: 30px;
+    }
+
+/* crear receta */
+
+    #tipe-recipe {
+      margin-left: 20px;
+      display: -webkit-box;
+    }
   
-  box-shadow: 0 0 15px rgba(0,0,0,.5);
-  width: 140px;
-  height: 200px;
-  margin: 5px;
-  float: left;
-  padding: 10px;
-  cursor: pointer;
-}
 
-.grid-one:hover{
-  box-shadow: 0 0 15px rgba(0,0,0,.5);
-  transform: scale(1.02);
-}
+   .more-info{
+      background-image: url('assets/Moodboard/more-info.png');
+      background-size: 30px 30px;
+      background-repeat: no-repeat;
+      height: 100px;
+      background-position: right;
+    }
 
-.grid{
-  padding-bottom: 100px;
-  height: 900px;
-}
-
-.grid-two {
-
-  box-shadow: 0 0 15px rgba(0,0,0,.5);
-  height: 100px;
-  margin: 5px;
-}
-
-.grid-title {
-  font-size: 40px;
-  font-weight: bold;
-  margin-top:18px;
-}
-
-.grid-title-create {
-  width: 200px;
-  margin-left: 20px;
-  font-size: 40px;
-  font-weight: bold;
-  margin-top:18px;
-}
-
-.options {
-  background-color:  #FD7F31;
-  padding-left: 3%;
-}
-
-footer {
-  background-color:  #FD7F31;
-  padding-left: 4%;
-  bottom: 0;
-  position: fixed;
-  width: -webkit-fill-available;
+    .create-recipe{
+      height: 440px;
+    }
   
-}
-.blue-column {
-  
-  height: 400px;
-  background-size: cover;
-}
+    #postBtn {
+      width: 300px;
+      border: none;
+      border-radius: 5px;
+      padding: 1%;
+      margin-top: 2%;
+      margin-left: 20px;
+      color: white;
+      cursor: pointer;
+      font-size: 25px;
+    }
 
-.green-column {
-  background-color: white;
-  height: 600px;
-  text-align: left;
-  box-shadow: 0 0 15px rgba(0,0,0,.5);
-  opacity: 0.95;
-}
-
-.sign-in-style {
-  width: 250px;
-  border: none;
-  border-radius: 5px;
-  padding: 1%;
-  background-color: #FD7F31;
-  margin-top: 0%;
-  margin-left: 35px;
-  color: white;
-  cursor: pointer;
-  font-size: 25px;
-}
-
-#postBtn{
-  width: 300px;
-  border: none;
-  border-radius: 5px;
-  padding: 1%;
-  background-color: #FD7F31;
-  margin-top: 2%;
-  margin-left: 20px;
-  color: white;
-  cursor: pointer;
-  font-size: 25px;
-}
-
-.sign-in-google {
-  background-color:  #FD7F31;
-  border-radius: 5px;
-  color: white;
-  font-size: 25px;
-  padding:1%;
-  width: 200px !important;
-  margin-left: 35px;
-  text-decoration: none;
-  padding-left: 18%;
-  padding-right: 20%;
-}
-
-.cfield {
-    float: left;
-    width: 80%;
-    position: relative;
-    margin-left: 30px;
-    margin-bottom: 19px;
-    border-bottom: 1px solid black;
-    padding-top: 5%;
-  }
-
-  #forgot-container {
-     margin-left: 100px; 
-     padding-top: 5%;
-     color: gray;
-     padding-bottom: 5%;
-
-  }
-  #register {
-    margin-left: 60px; 
-     padding-top: 2%;
-     color: gray;
-     padding-bottom: 5%;
-  }
-
-  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  font-size: 18px;
-  }
-
-  input {
-    width: 250px;
-    height: 30px;
-  }
-  input:focus {
-    outline: none !important;
-  }
-
-  #logo-welcome {
-    background-image: url(assets/Moodboard/Logo.png);
-    height: 200px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin-left: 60px;
-}
-
-.logo {
-  background-image: url(assets/Moodboard/Sin.png);
-  background-size: 100px 100px;
-  height: 85px;
-  background-repeat: no-repeat;
-}
-
-.timeline, .like, .newRecipe, .user, .home {
-  margin: 20px;
-  width: 40px;
-}
-
-.avatar {
-  margin: 5px;
-  width: 100px;
-  border-radius: 30px;
-}
-
-#tipe-recipe {
-margin-left: 20px;
-display: -webkit-box;
-}
-
-.more-info{
-  background-image: url('assets/Moodboard/more-info.png');
-  background-size: 30px 30px;
-  background-repeat: no-repeat;
-  height: 100px;
-  background-position: right;
-
-}
-
-.create-recipe{
-  height: 440px;
-}
-
-.notes {
-    background-image: -webkit-linear-gradient(white, white 30px, #ccc 30px, #ccc 31px, white 31px);
-    background-image: -moz-linear-gradient(white, white 30px, #ccc 30px, #ccc 31px, white 31px);
-    background-image: -ms-linear-gradient(white, white 30px, #ccc 30px, #ccc 31px, white 31px);
-    background-image: -o-linear-gradient(white, white 30px, #ccc 30px, #ccc 31px, white 31px);
-    background-image: linear-gradient(white, white 30px, #ccc 30px, #ccc 31px, white 31px);
-    background-size: 100% 31px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-    line-height: 31px;
-    
-    padding: 8px;
-}
-
-textarea {
-  margin-left: 20px;
-}
-
-.centrar{
-  text-align: center;
-}
-
-.user-name {
-  font-size: 30px;
-  font-weight: bold;
-  margin-top: 2px;
-}
-
-select.soflow{
-   -webkit-appearance: button;
-   -webkit-border-radius: 2px;
-   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
-   -webkit-padding-end: 20px;
-   -webkit-padding-start: 2px;
-   -webkit-user-select: none;
-   background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
-   background-position: 94% center;
-   background-repeat: no-repeat;
-   border: 1px solid #AAA;
-   color: #555;
-   font-size: inherit;
-   margin: 10px;
-   overflow: hidden;
-   padding: 5px 10px;
-   text-overflow: ellipsis;
-   white-space: nowrap;
-   width: 300px;
-}
-
-
-.flexcontainer {
-   display: flex;
-   flex-direction: row;
-   justify-content: flex-start;
-}
-.image-recipe{
-  width: 380px;
-  border-radius: 10px;
-}
-
-.title-recipe{
-  width: -webkit-fill-available
-}
-
-.description-recipe{
-  background-color: #e7e7e7;
-  padding: 3%;
-  margin: 10px;
-}

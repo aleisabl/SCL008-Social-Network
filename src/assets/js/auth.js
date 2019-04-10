@@ -25,8 +25,12 @@ export const loginGoogle = () => {
 	return 'login con Google OK';
 }
 
-export const createAccount = (email, password, nombreyapellido) => {
-	 let user = firebase.auth().currentUser;
+
+
+
+export const createAccount = (email, password, fullName) => {
+ let user = firebase.auth().currentUser;
+
 	firebase.auth().createUserWithEmailAndPassword(email, password).catch(function (error) {
 		// Handle Errors here.
 		var errorCode = error.code;
@@ -41,7 +45,7 @@ export const createAccount = (email, password, nombreyapellido) => {
 	        console.log(user)
 	        firebase.database().ref('userInfo/'+ user.uid).set({
 		 
-			fullnameUser: nombreyapellido,
+			fullnameUser: fullName,
 			photoUser: "http://www.xeus.com/wp-content/uploads/2014/09/One_User_Orange.png"
 
 			
@@ -73,6 +77,17 @@ export const logOut = () => {
 	firebase.auth().signOut();
 }
 
+// Funciones para hacer los tests de nuestro código
+
+// Función para verificar que el usuario ingresa por lo menos su nombre en el registro
+export const verifyFullName = (fullName) => {
+	if (fullName === ''){
+		return false;
+	} else
+		return true;
+  }
+
+// Función para verificar que las dos contraseñas ingresadas en el registro son idénticas
 export const verifyPass = (pass, passRepeat) => {
   if (pass === passRepeat) {
 		return true;
@@ -82,28 +97,19 @@ export const verifyPass = (pass, passRepeat) => {
 	}
 } 
 
-	
- export const verifyUser = (firebaseUser) => {
-	if (firebaseUser) {
-		console.log('muestra timeline')
-		return true;
-	}
-	else{
-		console.log("Debes registrarte para poder ingresar");
-		return false;
-	}
-} 
-
-export const verifyMail = (mail) => {
+// Función para veriicar que el correo cumple con un patrón estimado
+export const verifyEmail = (email) => {
     //expresión regular que simula el patrón del correo electrónico
     let pattern = /\S+@\S+\.\S+/;
-    return pattern.test(mail);
+    return pattern.test(email);
   }
 
+// Función para verificar que no se ingresen más de 100 carácteres en la receta
   export const verifyRecipe = (description) => {
 	if (description.length > 100) {
 		return false;
 	} else 
 		return true;
-	
   }
+
+  

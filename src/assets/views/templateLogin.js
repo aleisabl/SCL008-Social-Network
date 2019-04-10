@@ -2,9 +2,7 @@
    Debemos importar la función login Google 
 */
 
-import { loginGoogle } from './../js/auth.js';
-
-import { signIn } from './../js/auth.js';
+import { loginGoogle, signIn } from './../js/auth.js';
 
 export const templateLogin = () => {
     //creamos div que contendrá la plantilla
