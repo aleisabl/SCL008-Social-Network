@@ -1,4 +1,4 @@
-import { createAccount, verifyPass, } from './../js/auth.js';
+import { createAccount, verifyPass, verifyFullName } from './../js/auth.js';
 
 export const templateCreate = () => {
     //creamos div que contendrá la plantilla
@@ -44,16 +44,21 @@ export const templateCreate = () => {
         let pass = containerCreate.querySelector('#pass').value;
         let email = containerCreate.querySelector('#email').value;
         let passRepeat = containerCreate.querySelector('#pass-repeat').value;
-        let result = verifyPass(pass, passRepeat)
+        let result = verifyPass(pass, passRepeat);
         let fullName = containerCreate.querySelector('#full-name').value;
+        let resultFullName = verifyFullName(fullName);
 
-        
 
-        if (result === true) {
-            createAccount(email, pass, fullName);
+
+
+        if (result === false) {
+            alert ('Las contraseñas no coinciden')
+        } else if (resultFullName === false) {
+            alert('Coloca tu nombre y apellido')
         } else {
-            alert("Las contraseñas no coinciden")
+            createAccount(email, pass, fullName)
         }
+
 
     })
     return containerCreate;
