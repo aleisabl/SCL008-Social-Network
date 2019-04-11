@@ -51,7 +51,8 @@ export const templateTimeLine = () =>{
     text += `             <div>
                           <div  class='grid-one'>
                             <p>${element.titleRecipe}</p>
-                            <p>${element.recipe}</p>
+                            <p>${element.ingredientes}</p>
+                            <p>${element.preparacion}</p>
                             <p>apto para:${element.tipe}</p>
                             <p>Subido por ${element.username}</p>
                           </div> 

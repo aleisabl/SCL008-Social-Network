@@ -23,6 +23,8 @@ export  const templateNewRecipe = () =>{
                       </div>
                     </div>
                 </div>
+               
+
                 <div class="create-recipe">
                   <div class="title">
                   <p2>Nombre de tu receta<p2><br><br>
@@ -45,9 +47,11 @@ export  const templateNewRecipe = () =>{
                         <option value="Intolerante a la lactosa">Intolerante a la lactosa</option>
                         <option value="Vegano">Vegano</option>
                     </select>
-                    <input id="file" type="file" name="pic" accept="image/*">
-                    <button id="postBtn">Publicar</button>
-                </div>
+                    <div class="file" id=imgFile>
+                    <input id="file" type="file" name="pic" accept="image/*"> 
+                    <button type id="postBtn">Publicar</button>
+                     </div>
+                    
                     <footer><a href="#/timeline"><img class="timeline" src='assets/Moodboard/home.png'  alt="home"></a>
                     <a href="#/likes"><img class="like" src='assets/Moodboard/like.png'  alt="like"></a>
                     <a href="#/newrecipe"><img class="newRecipe" src='assets/Moodboard/add.png'  alt="newRecipe"></a>
@@ -56,7 +60,11 @@ export  const templateNewRecipe = () =>{
     `;
 
     containerNewRecipe.innerHTML= contentNewRecipe;
+   
+
+    containerNewRecipe.innerHTML= contentNewRecipe;
     const btnPostNewRecipe = containerNewRecipe.querySelector('#postBtn');
+
 
     btnPostNewRecipe.addEventListener('click', () =>{
       const title = containerNewRecipe.querySelector('#titleRecipe').value;
@@ -64,17 +72,20 @@ export  const templateNewRecipe = () =>{
       const preparacion = containerNewRecipe.querySelector('#preparacion').value;
       const tipeRecipe = containerNewRecipe.querySelector('#tipe-recipe').value;
       const file = containerNewRecipe.querySelector('#file').files[0];
-console.log("click publicar")
+      const fileRef = containerNewRecipe.querySelector('#fileRef');
+
+
       if (file) {
         const ref = firebase.storage().ref();
         const name = (+new Date())+'-'+ file.name;
         const metadata = { contentType: file.type };
         const task = ref.child(name).put(file,metadata);
+        // const tmpURL = window.location.href;
+        // window.location.href = '/src/assets/views/templateTimeLine.js';
       }
-   
-      postRecipe(title,ingredientes,preparacion,tipeRecipe,file);
       
-
+      postRecipe(title,ingredientes,preparacion,tipeRecipe, file,fileRef);
+     
     })  
 
 

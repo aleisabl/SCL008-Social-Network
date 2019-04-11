@@ -18,6 +18,7 @@ export const loginGoogle = () => {
 		// The firebase.auth.AuthCredential type that was used.
 		var credential = error.credential;
 		// ...
+		console.log(errorCode,errorMessage,email,credential,)
 	});
 	console.log(user)
 	
@@ -31,6 +32,7 @@ export const createAccount = (email, password, nombreyapellido) => {
 		var errorCode = error.code;
 		var errorMessage = error.message;
 		alert(errorMessage);
+		alert(errorCode)
 		// ...
 	});
 
