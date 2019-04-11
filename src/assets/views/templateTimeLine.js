@@ -1,7 +1,4 @@
-
-
 import { showRecipeTimeLine, showInfoUser } from './../js/posts.js';
-
 
 export const templateTimeLine = () =>{
   let user = firebase.auth().currentUser;

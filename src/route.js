@@ -79,7 +79,6 @@ const showTemplate = (hash) => {
         case 'timeline':
             firebase.auth().onAuthStateChanged(firebaseUser => {
                 if (firebaseUser) {
-                    
                     return containerRoot.appendChild(templateTimeLine());
                 }
                 else{
