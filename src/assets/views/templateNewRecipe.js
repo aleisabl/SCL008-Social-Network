@@ -81,7 +81,8 @@ export  const templateNewRecipe = () =>{
         const metadata = { contentType: file.type };
         const task = ref.child(name).put(file,metadata);
         // const tmpURL = window.location.href;
-        // window.location.href = '/src/assets/views/templateTimeLine.js';
+       window.location.href = "#/timeline";
+      
       }
       
       postRecipe(title,ingredientes,preparacion,tipeRecipe, file,fileRef);

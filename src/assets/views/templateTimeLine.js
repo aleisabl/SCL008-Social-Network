@@ -53,6 +53,7 @@ export const templateTimeLine = () =>{
                             <p>${element.titleRecipe}</p>
                             <p>${element.ingredientes}</p>
                             <p>${element.preparacion}</p>
+                            <p>${element.file}</p>
                             <p>apto para:${element.tipe}</p>
                             <p>Subido por ${element.username}</p>
                           </div> 
