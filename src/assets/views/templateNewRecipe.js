@@ -1,5 +1,7 @@
+
 import { postRecipe, showRecipeTimeLine } from './../js/posts.js';
 import { verifyRecipe, verifyTitle } from '../js/auth.js';
+
 
 
 export  const templateNewRecipe = () =>{
@@ -28,7 +30,8 @@ export  const templateNewRecipe = () =>{
                   </div>
                   <div class="center">
                      
-                     <textarea class="notes" maxlength="100" cols="40" rows="5" placeholder="ingresa tu receta" id="description"></textarea>
+                     <textarea class="notes" minlength="5" maxlength="100" cols="40" rows="5" placeholder="ingresa tu receta" id="description"></textarea>
+
                   </div>
         
                     
@@ -68,7 +71,9 @@ export  const templateNewRecipe = () =>{
         const task = ref.child(name).put(file,metadata);
       }
 
+
 // Condicional para que el usuario ingrese por lo menos 3 carácteres en el título y menos de 100 en la receta
+
 
       if (result === false) {
         alert('El título debe tener por lo menos tres carácteres')
@@ -79,6 +84,7 @@ export  const templateNewRecipe = () =>{
       postRecipe(title,description,tipeRecipe);
       
     })  
+
 
     return containerNewRecipe;
 }

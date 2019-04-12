@@ -2,9 +2,12 @@
 comprobar que el usuario ingresa la misma contraseña en ambos campos
  */
 
+
 import { verifyFullName, verifyPass, verifyEmail, verifyRecipe, verifyTitle, verifyPassLength, verifyPassStrong } from './../src/assets/js/auth.js';
 
+
 //Test que verifica que se ingresa el nombre
+
 describe('verifyFullName', () => {
 
     it('si no ha ingresado su nombre y apellido, retorna false y un alert que debe ingresar sus datos', () => {
@@ -30,7 +33,9 @@ describe('verifyPass', () => {
 
 });
 
+
 //Test que verifica que la contraseña tenga un punto adentro para que sea más fuerte
+
 describe('verifyPassStrong', () => {
 
     it('si la contraseña tiene un punto retorna true', () => {
@@ -64,10 +69,14 @@ describe('verifyEmail', () => {
     });
 
     it('si el correo no cumple con la expresión regular, retorna false', () => {
-        expect(verifyEmail('aleisabl.25gmail.com')).toBe(false);
+
+describe('verifyRecipe', () => {
+
+    it('si la receta.length es mayor a 100, retorna false', () => {
+        expect(verifyRecipe('nnnnnnnnnnnnnnnnnnnnhola esto es para ver si funciona el testnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn')).toBe(false);
     });
 
-}) 
+    it('si la receta.length es menor a 100, retorna true', () => {
 
 //Test que verifica que el título tenga por lo menos 3 carácteres
 describe('verifyTitle', () => {
@@ -90,11 +99,9 @@ describe('verifyRecipe', () => {
     });
 
     it('si receta.length es menor a 100, retorna true', () => {
+
         expect(verifyRecipe('')).toBe(true);
     });
 
 }) 
-
-
-
 

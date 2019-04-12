@@ -26,6 +26,8 @@ export const loginGoogle = () => {
 }
 
 
+
+
 export const createAccount = (email, password, fullName) => {
  let user = firebase.auth().currentUser;
 
@@ -45,7 +47,6 @@ export const createAccount = (email, password, fullName) => {
 		 
 			fullnameUser: fullName,
 			photoUser: "http://www.xeus.com/wp-content/uploads/2014/09/One_User_Orange.png"
-
 			
 			});
         }
@@ -85,12 +86,14 @@ export const verifyFullName = (fullName) => {
 		return true;
   }
 
-// Función para veriicar que el correo cumple con un patrón estimado
+ // Función para veriicar que el correo cumple con un patrón estimado
+
 export const verifyEmail = (email) => {
     //expresión regular que simula el patrón del correo electrónico
     let pattern = /\S+@\S+\.\S+/;
     return pattern.test(email);
   }
+
 
 // Función para verificar que las dos contraseñas ingresadas en el registro son idénticas
 export const verifyPass = (pass, passRepeat) => {
@@ -102,7 +105,10 @@ export const verifyPass = (pass, passRepeat) => {
 	}
 } 
 
-// Función para verificar que las contraseñas ingresadas en el registro sean igual o mayor a 6 carácteres
+
+
+// Función para veriicar que el correo cumple con un patrón estimado
+
 export const verifyPassLength = (pass) => {
 	if (pass.length < 6) {
 		return false;
@@ -113,8 +119,9 @@ export const verifyPassLength = (pass) => {
 // Función para verificar que las contraseñas ingresadas en el registro contengan un punto dentro de ellas
 export const verifyPassStrong = (pass) => {
     //expresión regular que espera un punto en la contraseña
-    let pattern = /\S+\.\+/;
+    let pattern = /\S+\S+/;
     return pattern.test(pass);
+
   }
 
 // Función para verificar que no se ingresen más de 100 carácteres en la receta
@@ -126,11 +133,13 @@ export const verifyPassStrong = (pass) => {
   }
 
 // Función para verificar que se ingresen por lo menos 3 carácteres en el título
+
  export const verifyTitle = (title) => {
 	 if (title.length < 3) {
 		 return false;
 	 } else
 	 return true;
  }
+
 
   

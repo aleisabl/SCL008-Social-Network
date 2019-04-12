@@ -1,4 +1,7 @@
+import { templateRecipe } from './templateRecipe.js'
+
 import { showRecipeTimeLine, showInfoUser } from './../js/posts.js';
+
 
 export const templateTimeLine = () =>{
   let user = firebase.auth().currentUser;
@@ -29,7 +32,8 @@ export const templateTimeLine = () =>{
                         </select>
                     </section>
 
-                    <div class='grid' id="grid" onclick="window.location.href='#/recipe'" >
+
+                    <div class='grid' id="grid"  style="margin-left:15px;" >
                       
                     </div>
 
@@ -48,11 +52,12 @@ export const templateTimeLine = () =>{
   let posts = showRecipeTimeLine();
   let text = '';
   let containerPost = containerTimeLine.querySelector('#grid');
-  
+
+  console.log(posts)
   posts.forEach(function(element){
    
-    text += `             <div>
-                          <div  class='grid-one'>
+    text += `             <div  id="recipe-page${element.user}">
+                          <div onclick="window.location.href='#/recipe?key=${element.key}'" class='grid-one'>
                             <p>${element.titleRecipe}</p>
                             <p>${element.recipe}</p>
                             <p>apto para:${element.tipe}</p>
@@ -66,6 +71,5 @@ export const templateTimeLine = () =>{
   return containerTimeLine;
   
 }
-
 
 

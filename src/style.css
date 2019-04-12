@@ -66,7 +66,9 @@
     }
 
     .options, footer, .sign-in-google, .sign-in-style, #postBtn  {
+
       background-color:  rgba(250, 161, 59, 0.884);
+
     }
 
 /*  styles del inicio de sesión y el registro */
@@ -133,7 +135,9 @@
 /*  muro */
 
     .logo {
-      background-image: url(assets/Moodboard/Sin.png);
+
+      background-image: url(assets/Moodboard/LogoSin.png);
+
       background-size: 90px 90px;
       height: 85px;
       background-repeat: no-repeat;
@@ -149,6 +153,7 @@
       position: fixed;
       width: -webkit-fill-available;
       background-color:  rgba(250, 161, 59, 0.884);
+
     }
 
     .blue-column {
@@ -270,4 +275,14 @@
       cursor: pointer;
       font-size: 25px;
     }
+
+
+.bottom-space{
+  overflow-y:auto;
+  margin-bottom: 100px;
+}
+
+.only-bottom-space{
+  margin-bottom: 100px;
+}
 

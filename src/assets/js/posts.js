@@ -14,12 +14,17 @@ export const postRecipe = (title,description,type) =>{
 export const showRecipeTimeLine = () =>{
 let post = []; 
  		firebase.database().ref('recipe/').on('value', (snapshot) =>{
+ 		let counter = 0;
 		snapshot.forEach(function (childsnapshot){
 		let childData = childsnapshot.val();
+		childData.key = Object.keys(snapshot.val())[counter];
+		
 		 post.push(childData);
+		 counter++;
 		})
 	})
- 
+ console.log(post);
+
  return post;
 };
 
@@ -37,6 +42,7 @@ export const showRecipeProfile = () => {
 	 return post;
 
 };
+
 
 export const showInfoUser = () =>{
 

@@ -1,5 +1,6 @@
 # AllergyBites
 
+
 ![imagen 0](src/assets/Moodboard/AllergyBitesInicio.png)
 
 ## **Descripción**
