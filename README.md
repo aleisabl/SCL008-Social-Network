@@ -78,7 +78,11 @@ https://www.figma.com/proto/twBVSXlWjBVOt0VIBjHZWm/Social-Network?node-id=207%3A
 ### **Testeos de Usabilidad**
 Por cada historia de usuario terminada se recibió feedback de distintas personas y se grabaron algunas con Loom utilizando nuestro prototipo de alta fidelidad:
 
-https://www.useloom.com/share/6e2a1b96a498427f88d284e556276c96
+https://www.loom.com/share/6e2a1b96a498427f88d284e556276c96
+https://www.loom.com/share/5a541f71a133417fad09832ba0f9ea72
+https://claseslaboratoria.slack.com/files/UFS6HGHFY/FHT8W0VAB/vid_20190408_213116.mp4
+
+También se recibió se hicieron testeos no grabados pasando el deploy a varias personas, del cual se rescató mucho feedback importante.
 
 ![](https://media.giphy.com/media/7MZ0v9KynmiSA/giphy-downsized.gif)
 
