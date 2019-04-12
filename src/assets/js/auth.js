@@ -119,7 +119,7 @@ export const verifyPassLength = (pass) => {
 // Función para verificar que las contraseñas ingresadas en el registro contengan un punto dentro de ellas
 export const verifyPassStrong = (pass) => {
     //expresión regular que espera un punto en la contraseña
-    let pattern = /\S+\S+/;
+    let pattern = /\S+\.\S+/;
     return pattern.test(pass);
 
   }
