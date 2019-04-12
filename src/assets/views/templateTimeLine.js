@@ -59,9 +59,10 @@ export const templateTimeLine = () =>{
     text += `             <div  id="recipe-page${element.user}">
                           <div onclick="window.location.href='#/recipe?key=${element.key}'" class='grid-one'>
                             <p>${element.titleRecipe}</p>
-                            <p>${element.recipe}</p>
-                            <p>apto para:${element.tipe}</p>
-                            <p>Subido por ${element.username}</p>
+                            <p>${element.ingredients.substring(0,90)}</p>
+                            <p>apto para:${element.preparation.substring(0,90)}</p>
+                            <p>Subido por ${element.tipe}</p>
+                            <p>${element.username}</p>
                           </div> 
                           </div>`;
 
