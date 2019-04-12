@@ -10,6 +10,8 @@ import { templateNewRecipe } from './assets/views/templateNewRecipe.js'
 
 import { templateRecipe } from './assets/views/templateRecipe.js'
 
+
+
 /*  crear una función que reciba el hash # y según la coincidencia retorne otra función que va 
     a imprimir el template en nuestro HTML 
 */
@@ -34,9 +36,10 @@ const changeRouter = (hash) => {
     if (hash === '#/newrecipe') {
         return showTemplate(hash);
     }
-    if (hash === '#/recipe') {
-        return showTemplate(hash);
+    if(hash.includes('#/recipe')){
+        return showTemplate('#/recipe');
     }
+
 }
 
 // imprimirá el template en el HTML
@@ -79,7 +82,7 @@ const showTemplate = (hash) => {
         case 'timeline':
             firebase.auth().onAuthStateChanged(firebaseUser => {
                 if (firebaseUser) {
-                    
+                    console.log(firebaseUser)
                     return containerRoot.appendChild(templateTimeLine());
                 }
                 else{
@@ -123,8 +126,7 @@ const showTemplate = (hash) => {
                     return containerRoot.appendChild(templateLogin());
 
                 }
-                });
-            
+        });
         break;
         case '' :
            

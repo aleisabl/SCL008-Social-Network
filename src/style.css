@@ -271,3 +271,11 @@
       font-size: 25px;
     }
 
+.bottom-space{
+  overflow-y:auto;
+  margin-bottom: 100px;
+}
+
+.only-bottom-space{
+  margin-bottom: 100px;
+}
