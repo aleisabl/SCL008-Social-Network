@@ -75,7 +75,7 @@ export const logOut = () => {
 	firebase.auth().signOut();
 }
 
-// Funciones para hacer los tests de nuestro código
+	// Funciones para hacer los tests de nuestro código
 
 // Función para verificar que el usuario ingresa por lo menos su nombre en el registro
 export const verifyFullName = (fullName) => {
@@ -85,7 +85,7 @@ export const verifyFullName = (fullName) => {
 		return true;
   }
 
-  // Función para veriicar que el correo cumple con un patrón estimado
+// Función para veriicar que el correo cumple con un patrón estimado
 export const verifyEmail = (email) => {
     //expresión regular que simula el patrón del correo electrónico
     let pattern = /\S+@\S+\.\S+/;
@@ -102,6 +102,7 @@ export const verifyPass = (pass, passRepeat) => {
 	}
 } 
 
+// Función para verificar que las contraseñas ingresadas en el registro sean igual o mayor a 6 carácteres
 export const verifyPassLength = (pass) => {
 	if (pass.length < 6) {
 		return false;
@@ -109,9 +110,10 @@ export const verifyPassLength = (pass) => {
 		return true;
   }
 
+// Función para verificar que las contraseñas ingresadas en el registro contengan un punto dentro de ellas
 export const verifyPassStrong = (pass) => {
     //expresión regular que espera un punto en la contraseña
-    let pattern = /\S+\.\S+/;
+    let pattern = /\S+\.\+/;
     return pattern.test(pass);
   }
 
@@ -123,6 +125,7 @@ export const verifyPassStrong = (pass) => {
 		return true;
   }
 
+// Función para verificar que se ingresen por lo menos 3 carácteres en el título
  export const verifyTitle = (title) => {
 	 if (title.length < 3) {
 		 return false;
