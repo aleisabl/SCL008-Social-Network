@@ -6,9 +6,13 @@ export const postRecipe = (title,description,type) =>{
 	  	user: user.uid, 
 	    username: user.displayName,
 	    titleRecipe : title,
-	    recipe : description,
+	    ingredients : ingredientes,
+	    preparation : preparacion,
 	    tipe: type,
-	});
+	})
+	.then(res => {
+			alert("tu publicación se ha realizado con éxito");
+		})
 };
 
 export const showRecipeTimeLine = () =>{

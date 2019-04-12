@@ -24,16 +24,23 @@ export  const templateNewRecipe = () =>{
                     </div>
                 </div>
                  <div class="create-recipe">
-                  <div class="cfield">
+                    <div class="cfield" >
+                     <p2>Nombre de tu receta<p2><br><br>
+                    <input type="text" id="titleRecipe" minlength="3">
                      
-                     <input type="text" id="title-recipe" minlength="3" placeholder="Titulo de tu receta">
                   </div>
+                  <p2 class="align">Ingredientes<p2>
                   <div class="center">
                      
                      <textarea class="notes" minlength="5" maxlength="100" cols="40" rows="5" placeholder="ingresa tu receta" id="description"></textarea>
 
                   </div>
-        
+                  <p2 class="align">Preparación<p2>
+                    <div class="center">
+                     
+                     <textarea class="notes" minlength="5" maxlength="100" cols="40" rows="5" placeholder="ingresa tu receta" id="description"></textarea>
+
+                  </div>
                     
                     
                     <select id="tipe-recipe" class="soflow">
@@ -80,7 +87,7 @@ export  const templateNewRecipe = () =>{
       } else if (resultRecipe === false) {
         alert('La receta debe tener menos de 100 carácteres')
       } else
-
+      window.location.href= "#/timeline"
       postRecipe(title,description,tipeRecipe);
       
     })  
