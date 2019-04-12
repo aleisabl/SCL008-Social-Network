@@ -70,12 +70,6 @@ export const templateCreate = () => {
 
                 createAccount(email, pass, fullName)
             }
-
-        }
-    }
-});
-
-
     
         })
     
