@@ -56,17 +56,6 @@ export const templateCreate = () => {
 //Condicional para que solo cree la cuenta si se cumplen las funciones verifyFullName, PassLength y PassStrong
 
 
-
-
-        if (result === false) {
-            alert ('Las contraseñas no coinciden')
-        } else if (resultFullName === false) {
-
-        if (resultFullName === false) {
-
-            alert('Coloca tu nombre y apellido')
-        } else {
-
         
             if (resultFullName === false) {
                 alert('Coloca tu nombre y apellido')
@@ -81,9 +70,9 @@ export const templateCreate = () => {
 
                 createAccount(email, pass, fullName)
             }
-        }
-});
-
     
-    return containerCreate;
-}
+        })
+    
+        return containerCreate;
+
+    }
