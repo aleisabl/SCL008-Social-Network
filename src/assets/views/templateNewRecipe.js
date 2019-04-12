@@ -26,7 +26,7 @@ export  const templateNewRecipe = () =>{
                  <div class="create-recipe">
                   <div class="cfield">
                      
-                     <input type="text" id="titleRecipe" minlength="3" placeholder="Titulo de tu receta">
+                     <input type="text" id="title-recipe" minlength="3" placeholder="Titulo de tu receta">
                   </div>
                   <div class="center">
                      
@@ -57,7 +57,7 @@ export  const templateNewRecipe = () =>{
     const btnPostNewRecipe = containerNewRecipe.querySelector('#postBtn');
 
     btnPostNewRecipe.addEventListener('click', () =>{
-      const title = containerNewRecipe.querySelector('#titleRecipe').value;
+      const title = containerNewRecipe.querySelector('#title-recipe').value;
       const description = containerNewRecipe.querySelector('#description').value;
       const tipeRecipe = containerNewRecipe.querySelector('#tipe-recipe').value;
       const file = containerNewRecipe.querySelector('#file').files[0];
@@ -71,8 +71,8 @@ export  const templateNewRecipe = () =>{
         const task = ref.child(name).put(file,metadata);
       }
 
-   
-      postRecipe(title,description,tipeRecipe);
+
+// Condicional para que el usuario ingrese por lo menos 3 carácteres en el título y menos de 100 en la receta
 
 
       if (result === false) {

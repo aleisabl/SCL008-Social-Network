@@ -6,6 +6,8 @@ comprobar que el usuario ingresa la misma contraseña en ambos campos
 import { verifyFullName, verifyPass, verifyEmail, verifyRecipe, verifyTitle, verifyPassLength, verifyPassStrong } from './../src/assets/js/auth.js';
 
 
+//Test que verifica que se ingresa el nombre
+
 describe('verifyFullName', () => {
 
     it('si no ha ingresado su nombre y apellido, retorna false y un alert que debe ingresar sus datos', () => {
@@ -18,6 +20,7 @@ describe('verifyFullName', () => {
 
 }) 
 
+//Test que verifica que las dos contraseñas coincidan
 describe('verifyPass', () => {
 
     it('si las contraseñas coinciden, retorna true', () => {
@@ -31,6 +34,8 @@ describe('verifyPass', () => {
 });
 
 
+//Test que verifica que la contraseña tenga un punto adentro para que sea más fuerte
+
 describe('verifyPassStrong', () => {
 
     it('si la contraseña tiene un punto retorna true', () => {
@@ -43,6 +48,7 @@ describe('verifyPassStrong', () => {
 
 });
 
+//Test que verifica que la contraseña sea igual o mayor a 6 carácteres
 describe('verifyPassLength', () => {
 
     it('si pass.length es menor a 6, retorna false', () => {
@@ -55,6 +61,7 @@ describe('verifyPassLength', () => {
 
 }) 
 
+//Test que verifica que el correo contenga su arroba
 describe('verifyEmail', () => {
 
     it('si el correo cumple con la expresión regular, retorna true', () => {
@@ -71,6 +78,7 @@ describe('verifyRecipe', () => {
 
     it('si la receta.length es menor a 100, retorna true', () => {
 
+//Test que verifica que el título tenga por lo menos 3 carácteres
 describe('verifyTitle', () => {
 
     it('si title.length es menor a 3, retorna false', () => {
@@ -83,6 +91,7 @@ describe('verifyTitle', () => {
 
 }) 
 
+//Test que verifica que la receta no sea mayor a 100 carácteres
 describe('verifyRecipe', () => {
 
     it('si receta.length es mayor a 100, retorna false', () => {
