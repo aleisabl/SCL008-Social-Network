@@ -1,7 +1,6 @@
 
-import { postRecipe } from './../js/posts.js';
-
-import { showRecipeTimeLine } from './../js/posts.js';
+import { postRecipe, showRecipeTimeLine } from './../js/posts.js';
+import { verifyRecipe, verifyTitle } from '../js/auth.js';
 
 
 
@@ -32,6 +31,7 @@ export  const templateNewRecipe = () =>{
                   <div class="center">
                      
                      <textarea class="notes" minlength="5" maxlength="100" cols="40" rows="5" placeholder="ingresa tu receta" id="description"></textarea>
+
                   </div>
         
                     
@@ -61,6 +61,8 @@ export  const templateNewRecipe = () =>{
       const description = containerNewRecipe.querySelector('#description').value;
       const tipeRecipe = containerNewRecipe.querySelector('#tipe-recipe').value;
       const file = containerNewRecipe.querySelector('#file').files[0];
+      let result = verifyTitle(titleRecipe);
+      let resultRecipe = verifyRecipe(description)
 
       if (file) {
         const ref = firebase.storage().ref();
@@ -68,10 +70,19 @@ export  const templateNewRecipe = () =>{
         const metadata = { contentType: file.type };
         const task = ref.child(name).put(file,metadata);
       }
+
    
       postRecipe(title,description,tipeRecipe);
-      
 
+
+      if (result === false) {
+        alert('El título debe tener por lo menos tres carácteres')
+      } else if (resultRecipe === false) {
+        alert('La receta debe tener menos de 100 carácteres')
+      } else
+
+      postRecipe(title,description,tipeRecipe);
+      
     })  
 
 

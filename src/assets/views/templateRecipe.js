@@ -1,10 +1,13 @@
-export  const templateRecipe = () =>{     
+
+export  const templateRecipe = () =>{
+
   document.getElementById('root').innerHTML='';
    const containerRecipe = document.createElement('div');
-   const contentRecipe = `    <div class='bottom-space'>
+   const contentRecipe = `    <div class=''>
                         
                          <h1 class='grid-title-create title-recipe'>
-                            
+                            Verduras Salteadas
+
                           </h1>
                           <div style="text-align: center;">
                           <image class="image-recipe" src="https://static.vix.com/es/sites/default/files/imj/elgranchef/s/salteado-de-verduras.jpg" >
@@ -41,13 +44,7 @@ export  const templateRecipe = () =>{
                             <li>8 bruselas</li>
                             <h3 class="description-recipe"> Preparación </h3>
                           <p class="description-recipe" '></p>
-                          </div>
-                          
-
-
-                     
-                  
-              
+                          </div>              
                  
                     <footer><a href="#/timeline"><img class="timeline" src='assets/Moodboard/home.png'  alt="home"></a>
                     <a href="#/likes"><img class="like" src='assets/Moodboard/like.png'  alt="like"></a>
@@ -61,4 +58,3 @@ export  const templateRecipe = () =>{
 
     return containerRecipe;
 }
-

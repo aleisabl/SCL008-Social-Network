@@ -29,7 +29,7 @@ export const templateLogin = () => {
             </div>
 
             <div id="forgot-container">
-                <a href="#/forgot">Olvidaste tu contraseña?</a>
+                <a href="#/forgot">¿Olvidaste tu contraseña?</a>
             </div>
             <div>
     
@@ -38,7 +38,7 @@ export const templateLogin = () => {
                     </div>
 
                     <div>
-                        <p id="register">No tienes una cuenta? &nbsp;<a href="#/create">Regístrate Aquí</a></p>
+                        <p id="register">¿No tienes una cuenta? &nbsp;<a href="#/create">Regístrate Aquí</a></p>
                     </div>
 
             </div>

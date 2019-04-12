@@ -1,6 +1,6 @@
-
 import { templateRecipe } from './templateRecipe.js'
-import { showInfoUser, showRecipeTimeLine } from './../js/posts.js';
+
+import { showRecipeTimeLine, showInfoUser } from './../js/posts.js';
 
 
 export const templateTimeLine = () =>{
@@ -32,6 +32,7 @@ export const templateTimeLine = () =>{
                         </select>
                     </section>
 
+
                     <div class='grid' id="grid"  style="margin-left:15px;" >
                       
                     </div>
@@ -51,6 +52,7 @@ export const templateTimeLine = () =>{
   let posts = showRecipeTimeLine();
   let text = '';
   let containerPost = containerTimeLine.querySelector('#grid');
+
   console.log(posts)
   posts.forEach(function(element){
    
@@ -69,9 +71,5 @@ export const templateTimeLine = () =>{
   return containerTimeLine;
   
 }
-
-
-
-
 
 

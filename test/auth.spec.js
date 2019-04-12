@@ -2,7 +2,9 @@
 comprobar que el usuario ingresa la misma contraseña en ambos campos
  */
 
-import { verifyFullName, verifyPass, verifyEmail, verifyRecipe } from './../src/assets/js/auth.js';
+
+import { verifyFullName, verifyPass, verifyEmail, verifyRecipe, verifyTitle, verifyPassLength, verifyPassStrong } from './../src/assets/js/auth.js';
+
 
 describe('verifyFullName', () => {
 
@@ -28,19 +30,38 @@ describe('verifyPass', () => {
 
 });
 
-/*Función que valida que el usuario debe ingresar un @ cuando ingresa un correo*/
 
-describe('verifyEmail', () => {
+describe('verifyPassStrong', () => {
 
-    it('si el correo cumple con la regla, retorna true', () => {
-        expect(verifyEmail('aleisabl.25@gmail.com')).toBe(true);
+    it('si la contraseña tiene un punto retorna true', () => {
+        expect(verifyPassStrong('aaaaa.aaa')).toBe(true);
     });
 
-    it('si el correo no cumple con la regla, retorna false', () => {
-        expect(verifyEmail('aleisabl.25gmail.com')).toBe(false);
+    it('si las contraseñas no tiene punto retorna false', () => {
+        expect(verifyPassStrong('aaaaaa')).toBe(false);
+    });
+
+});
+
+describe('verifyPassLength', () => {
+
+    it('si pass.length es menor a 6, retorna false', () => {
+        expect(verifyPassLength('12345')).toBe(false);
+    });
+
+    it('si pass.length es mayor a 6, retorna true', () => {
+        expect(verifyPassLength('123456')).toBe(true);
     });
 
 }) 
+
+describe('verifyEmail', () => {
+
+    it('si el correo cumple con la expresión regular, retorna true', () => {
+        expect(verifyEmail('aleisabl.25@gmail.com')).toBe(true);
+    });
+
+    it('si el correo no cumple con la expresión regular, retorna false', () => {
 
 describe('verifyRecipe', () => {
 
@@ -49,6 +70,27 @@ describe('verifyRecipe', () => {
     });
 
     it('si la receta.length es menor a 100, retorna true', () => {
+
+describe('verifyTitle', () => {
+
+    it('si title.length es menor a 3, retorna false', () => {
+        expect(verifyTitle('h')).toBe(false);
+    });
+
+    it('si title.length es mayor a 3, retorna true', () => {
+        expect(verifyTitle('Pan con queso')).toBe(true);
+    });
+
+}) 
+
+describe('verifyRecipe', () => {
+
+    it('si receta.length es mayor a 100, retorna false', () => {
+        expect(verifyRecipe('hola estos son mas de 100 caracteres es para ver si funciona el test..................................gatitos')).toBe(false);
+    });
+
+    it('si receta.length es menor a 100, retorna true', () => {
+
         expect(verifyRecipe('')).toBe(true);
     });
 

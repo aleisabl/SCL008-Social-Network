@@ -24,6 +24,7 @@ let post = [];
 		})
 	})
  console.log(post);
+
  return post;
 };
 
@@ -41,7 +42,6 @@ export const showRecipeProfile = () => {
 	 return post;
 
 };
-
 
 
 export const showInfoUser = () =>{
