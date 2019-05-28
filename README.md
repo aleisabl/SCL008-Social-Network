@@ -5,7 +5,7 @@
 
 ## **Descripción**
 
-AllergyBites es una red social que da una plataforma para publicar y ver recetas e información sobre salud y alimentación, para todas aquellas personas que tengan algún problema con la alimentación o simplemente tengan habitos alimenticios específicos o diferentes.
+[AllergyBites](https://allergy-bites.firebaseapp.com/) es una red social que da una plataforma **móvil** para publicar y ver recetas e información sobre salud y alimentación, para todas aquellas personas que tengan algún problema con la alimentación o simplemente tengan habitos alimenticios específicos o diferentes.
 
 ## **Lenguajes y herramientas utilizadas en el código**
 
